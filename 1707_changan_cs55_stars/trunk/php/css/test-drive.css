@@ -1,0 +1,115 @@
+html{
+    height: 100%;
+    overflow: hidden;
+}
+/*第六屏开始*/
+.page6 .head-wrap{
+    width: 35%;
+    margin: 73% 0 0 32%;
+}
+/*每个头像的样式*/
+.page6 .head-wrap .head{
+	width: 32%;
+	/* padding-bottom:32%; */
+	position:relative;
+	background: url(../images/head-nor.png);
+	background-size: 100% 100%;
+	position: absolute;
+	border-radius: 50%;
+	overflow:hidden;
+}
+.page6 .head-wrap .head.act{
+	background: none;
+	background-size: 100% 100%;
+	padding-bottom: 0;
+}
+.page6 .head-wrap .head-bottom{
+	margin-top: 70%;
+}
+/*主驾驶大小*/
+.page6 .head-wrap .head1{
+	width: 40%;
+	/* padding-bottom: 40%; */
+	left: -4px;
+	top: -4px;
+}
+.page6 .head-wrap .head4{
+	margin-left: 34%;
+}
+.page6 .head-wrap .head .abso{
+  height:100%;
+}
+/*底部按钮*/
+.page6 .btn-wrap{
+	width: 82%;
+	margin:0 0 10% 9.5%;
+}
+.page6 .share-btn{
+	width: 23%;
+}
+.page6 .to-draw-btn{
+	width: 36%;
+	left: 32% ;
+}
+.page6 .to-draw-btn.act{
+	display: block;
+}
+.page6 .special-btn{
+	width: 23%;
+}
+.warn-btn {
+    width: 25%;
+    left: 37.5%;
+    margin-bottom:30%;
+    z-index: 10;
+    animation: shan 0.8s infinite alternate;
+}
+@keyframes shan {
+    0% {
+    	transform: translate3d(0,-20px,0);
+    }
+    100% {
+    	transform: translate3d(0,0px,0);
+        /*opacity: 0;*/
+    }
+}
+/* 小弹层 */
+.pupup-small{
+	width: 58% ;
+	margin:46% 0 0 21%;
+}
+/*需要更多人数 弹层*/
+.pupup-need{
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+}
+.pupup-need p{
+	width: 90%;
+	left: 5%;
+	margin-bottom: 18%;
+	line-height: 1.5;
+}
+/* 分享弹层 */
+.pupup-share{
+	z-index: 30;
+}
+/* 分享弹层 */
+.pupup-lottery .lottery-btn{
+	width: 46%;
+	left: 27% ;
+	margin-bottom: 44.4%;
+}
+.pupup-lottery .lottery-list{
+	width: 100%;
+	display: none;
+}
+.lottery-list img{
+	display: none;
+}
+.lottery-list .close{
+	width: 26px;
+    margin: 42% 19% 0 0 ;
+    padding:2%;
+}
+/*第六屏结束*/

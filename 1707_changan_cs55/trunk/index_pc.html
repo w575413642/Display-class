@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit">
+<title>CS55上市直播看这里</title>
+<meta name="keywords" content="精彩内容全呈现，官网直播、斗鱼人气主播同步放送！" />
+<meta name="description" content="精彩内容全呈现，官网直播、斗鱼人气主播同步放送！" />
+<meta name="content" content="精彩内容全呈现，官网直播、斗鱼人气主播同步放送！" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="pc/styles/base.css">
+<link rel="stylesheet" href="pc/styles/idangerous.swiper2.7.6.css">
+<link rel="stylesheet" href="pc/styles/animate.css">  
+<link href="pc/live_plugin/css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+<link href="pc/live_plugin/css/nanoscroller.css" type="text/css" rel="stylesheet">
+<!--<link href="pc/live_plugin/css/bootstrap.css" type="text/css" rel="stylesheet">-->
+<link href="pc/scripts/video-js/video-js.css" rel="stylesheet" type="text/css"> 
+<link href="pc/live_plugin/css/live.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="pc/styles/index.css?v=13">
+<style>
+/*价格*/
+.d-price .d-txt{width:43.85%;top:1.518%;left:21.82%}
+.d-price-box {position:absolute;top:42%;width:1000px;left:50%;margin-left:-500px;display:none;text-align:left;}
+.d-price-box li{margin-bottom:20px;width: 57%;float: left;font-size: 33px;}
+.d-price-box li.item{width: 43%;}
+.d-time-txt{font-size:44px;}
+
+</style>   
+<script src="pc/scripts/jquery-1.11.2.min.js"></script>   
+<script src="pc/scripts/video-js/video.js"></script>
+<script>videojs.options.flash.swf = "pc/scripts/video-js/video-js.swf";</script>
+<script src="pc/scripts/respond.min.js"></script>   
+<script src="pc/scripts/tour.js"></script>
+<script type="text/javascript"> 
+	function hideUrlBar() { 
+	}
+	var loadingIndex = 0;
+	var timer = setInterval(function(){
+		if(loadingIndex>=99){
+			clearInterval(timer)
+			$('.d-loading').hide();
+			$('.d-logo').addClass('bounceInRight' + ' animated').show(); 
+			$('.d-kv .d-txt').addClass('bounceRightBottom'+' animated').show();
+		}else{
+			loadingIndex++;
+			$('.d-loading-txt').text(loadingIndex+'%');
+			$('.d-loading-line').css({'width':loadingIndex+'%'});
+		}
+		
+	},50)
+</script> 
+<!--监测代码--> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?dceaeaefe1a97d13039d223d36b3e1ca";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>  
+
+<div class="d-loading">
+	<div class="d-loading-box">
+		<div class="d-loading-txt">0%</div>
+		<div class="d-loading-line-box"><div class="d-loading-line"></div></div>
+	</div>
+</div>
+<div class="d-main">
+	<div class="navbar">
+		<div class="line-box line-top"></div>
+		<div class="navbar-box">
+			<ul>
+				<li data-index="0" class="nav-item home">
+					<span>首　　页</span><img src="pc/images/menu1.png" class="menu-icon"/>
+				</li>
+				<li data-index="2" class="nav-item price">
+					<span>价格公布</span><img src="pc/images/menu2.png" class="menu-icon"/>
+				</li>
+				<li data-index="3" class="nav-item live">
+					<span>官网直播</span><img src="pc/images/menu3.png" class="menu-icon"/>
+				</li>
+				<li data-index="4" class="nav-item fish">
+					<span>斗鱼直播</span><img src="pc/images/menu4.png" class="menu-icon"/>
+				</li>
+				<li data-index="5" class="nav-item car">
+					<span>360°看车</span><img src="pc/images/menu6.png" class="menu-icon"/>
+				</li>
+				<li data-index="7" class="nav-item point">
+					<span>车型卖点</span><img src="pc/images/menu5.png" class="menu-icon"/>
+				</li>
+				<li data-index="10" class="nav-item news">
+					<span>媒得说</span><img src="pc/images/menu7.png" class="menu-icon"/>
+				</li>
+				<li data-index="11" class="nav-item message">
+					<span>精彩评论</span><img src="pc/images/menu9.png" class="menu-icon"/>
+				</li>
+				<li data-index="12" class="nav-item testdrive">
+					<span>一键预约</span><img src="pc/images/menu8.png" class="menu-icon"/>
+				</li>
+			</ul>
+		</div>
+		<div class="line-box line-bottom"></div>
+	</div>
+	<div class="swiper-container main-container">
+		<div class="swiper-wrapper">   
+			<div class="swiper-slide d-kv">
+				<div class="d-page">
+					<img src="pc/images/bg_kv.jpg" class="d-bg"/>
+					<img src="pc/images/txt_kv1.png" class="d-txt animated2 bounceRightBottom animated"/>
+					<img src="pc/images/txt_kv2.png" class="d-txt animated3 bounceRightBottom animated"/>
+					<img src="pc/images/txt_kv3.png" class="d-txt animated4 bounceRightBottom animated"/>
+					<img src="pc/images/txt_kv4.png" class="d-txt animated5 bounceRightBottom animated"/>
+					<img src="pc/images/txt_kv5.png" class="d-txt animated6 bounceRightBottom animated"/>
+					<img src="pc/images/txt_kv6.png" class="d-txt animated7 bounceRightBottom animated"/>
+					<img src="pc/images/logo.png" class="d-logo bounceInRight animated"/> 
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div> 
+			<div class="swiper-slide d-red-blue">
+				<div class="d-page">
+					<img src="pc/images/bg_red_blue.jpg" class="d-bg"/>
+					<img src="pc/images/car_red_blue.png" class="d-car zoomIn animated"/>
+					<img src="pc/images/txt_red_blue1.png" class="d-txt animated2 leftBottom animated"/>
+					<img src="pc/images/txt_red_blue2.png" class="d-txt animated2 leftBottom animated"/>
+					<img src="pc/images/txt_red_blue3.png" class="d-txt animated3 leftTop animated"/>
+					<img src="pc/images/txt_red_blue4.png" class="d-txt animated3 rightTop animated"/>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>
+			<div class="swiper-slide d-price">
+				<div class="d-page">
+					<img src="pc/images/bg_price.jpg" class="d-bg"/>
+					<img src="pc/images/txt_price1.png" class="d-txt"/>
+					<img src="pc/images/txt_price2.png" class="d-txt"/>
+					<ul class="d-price-box">
+						<li>1.5T 6MT 炫目型 83,900 元</li>
+						<li class="item">1.5T 6AT 炫彩型 98,900 元</li>
+						<li>1.5T 6MT 炫色型 89,900 元</li>
+						<li class="item">1.5T 6AT 炫色型 102,900 元</li>
+						<li>1.5T 6MT 炫动型 99,900 元</li>
+						<li class="item">1.5T 6AT 炫动型 113,900 元</li>
+						<li>1.5T 6MT 炫酷型 109,900 元</li>
+						<li class="item">1.5T 6AT 炫耀型 132,900 元</li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div> 
+			<div class="swiper-slide d-live">
+				<div class="d-page">
+					<img src="pc/images/bg_live.jpg" class="d-bg"/>
+					<img src="pc/images/txt_live1.png" class="d-txt leftTop animated"/>
+					<img src="pc/images/txt_live2.png" class="d-txt leftTop animated"/>
+				</div> 
+				<div class="live-box">
+					<div class="live-container">
+						<div class="live-container_box over">
+							<div class="live-container_box_video">
+								<div class="live-title">
+									<div style="height:100%;position:absolute;top:0px">
+										<!--<p style="color:#fff;padding-left:20px">CHANGAN AUTO SHANGHAI AUTO SHOW</p>-->
+									</div>
+									<img  src="pc/live_plugin/images/title2.jpg" style="width:100%;display:block;position:absolute;top:0px;height:100%" />
+									<div class="changanBox">
+										<img  src="pc/live_plugin/images/changan_v.png" class="v fl">
+										<div class="officialText fl">
+											<p>长安汽车微信公众号</p> 
+										</div>
+									</div>
+									<img  src="pc/images/qrcode.png" class="d-qrcode" />
+									<div class="moni">
+										<img  src="pc/live_plugin/images/guanzhu2.png" />
+									</div>
+									<!-- <div id="d-bum" class="d-num">观看人数：<span class="inlinecount">0</span></div> -->
+								</div>
+								
+								<div style="width:100%;" class="video_box"> 
+									<img src="pc/images/poster.jpg" class="d-poster"/>
+									<img src="pc/images/player_icon.png" class="d-player-icon" data-link="video.mp4"/> 
+								</div> 
+								<!--视频工具条-->
+								<!-- <div class="live-container_box_footer">
+									<div class="live-container_box_footer_content">
+										<div class="tools_live" style="height:39px;width:90%;margin:0 auto;">
+											<img class="toolbar-voice" src="pc/live_plugin/images/icon-voice.png" />
+											<div class="toolbar-voiceslider" id="slider">
+												<img src="pc/live_plugin/images/slider_panel.png" />
+											</div>
+											<div class="full_screen"><img src="pc/live_plugin/images/full.png"/></div>
+											<div style="float:right">
+												<span class="toolbar-danmu toolbar-danmu-bg" data-val="close" title="点击关闭弹幕" alt="点击关闭弹幕">
+											  <img class="toolbar-danmu-btn btn-close" src="pc/live_plugin/images/btn_dot.png" alt="点击开启弹幕"  title="点击开启弹幕" />
+											  <img class="toolbar-danmu-btn btn-open" src="pc/live_plugin/images/btn_dot_act.png" title="点击关闭弹幕" alt="点击关闭弹幕" />
+											</span>
+												<img src="pc/live_plugin/images/btnclose_bg.png" />
+												<img class="toolbar-danmu" src="pc/live_plugin/images/danmu_close.png" />
+												<span class="danmu_font">弹幕开</span>
+											</div> 
+										</div>
+										<div id="msgcontent" style="visibility:hidden;opacity:0;"></div>
+									</div>
+								</div> -->
+								<!--视频工具条结束-->
+								<div class="zanlayout">
+									<div class="zanbox">
+									</div>
+									<div class="zanbtn">
+										<div style="width:100%;text-align: center;height:100%">
+											<img src="pc/live_plugin/images/heart/1.png" />
+											<p class="zan-num">26180</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="live-container_box_bar_open hidden"><img src="pc/live_plugin/images/slider_open.png" /></div>
+							<div class="live-container_box_bar">
+								<div class="live-container_box_footer-layout-emotion hidden"></div>
+								<div class="live-container_box_bar_close"><img src="pc/live_plugin/images/slider_close.png" /></div>
+								<div class="live-container_box_bar_content">
+									<!-- <h5 class="live-container_box_bar_header hidden">留言 <span class="chatNum">0</span></h5> -->
+									<p class="live-container_box_bar_content_title">弹幕内容</p>
+									<div class="live-container_box_bar_content_list nano">
+										<div class="nano-content" id="chatlist" tabindex="0">
+											<p>游客70: 坐等价格</p>
+											  <p>游客71: 真心希望长安不要让我们失望 价格惠民</p>
+											  <p>游客72: 8万起差不多了</p>
+											  <p>游客73: 斗鱼咋选俩逗比直播</p>
+											  <p>游客74: 看的尴尬症都犯了，就不能多花钱请点专业车评</p>
+											  <p>游客75: 真像网传手动挡9.8w起步，就要骂他了！</p>
+											  <p>游客76: 坐等价格</p>
+											  <p>游客77: 你好</p>
+											  <p>游客78: 价格</p>
+											  <p>游客79: 6.78万</p>
+											  <p>游客80: 上面不是说了9.8万？</p>
+											  <p>游客81: 那就太高了就不考虑了</p>
+											  <p>游客82: 开始了吗</p>
+											  <p>游客83: 好</p>
+											  <p>游客84: 8万起</p>
+											  <p>游客85: 价格多少</p>
+											  <p>游客86: 是我吗</p>
+											  <p>游客87: 8.8万</p>
+											  <p>游客88: 10.8万</p>
+											  <p>游客104: 有人吗</p>
+											  <p>游客105: 55555</p>
+											  <p>游客106: 什么时候开始</p>
+											  <p>游客107: 666</p>
+											  <p>游客108: 预测一下价格</p>
+											  <p>游客109: 能不能出中端轿车 不喜欢suv</p>
+											  <p>游客110: 8-12万多</p>
+											  <p>游客111: 睿骋太老了 出点年轻人开的高颜值家轿吧</p>
+											  <p>游客112: 乞丐版应该在9万左右</p>
+											  <p>游客114: 7/11</p>
+											  <p>游客115: 什么时候开始直播</p>
+											  <p>游客116: 不可能那么贵</p>
+											  <p>游客117: gui</p>
+											  <p>游客118: 要到8点整吗</p>
+											  <p>游客119: 贵了直接买吉利gs</p>
+											  <p>游客120: 价格给我们一个惊喜，我们给销量一个惊喜</p>
+											  <p>游客121: 7。8</p>
+											  <p>游客122: 贵了直接买传祺</p>
+											  <p>游客123: 不过我还是比较喜CS75</p>
+											  <p>游客124: 希望不要太贵</p>
+											  <p>游客125: 有自动泊车不可能太便宜</p>
+											  <p>游客126: 贵了真的不会买</p>
+											  <p>游客127: 一定要20点吗？</p>
+											  <p>游客128: 之前传的9.88起靠谱吗</p>
+											  <p>游客129: 早点开始不行吗</p>
+											  <p>游客130: 贵不贵无所谓，我是没看好它</p>
+											  <p>游客131: 虚拟价格</p>
+											  <p>游客132: 正式价格还没出来</p>
+											  <p>游客133: 你看不看好无所谓</p>
+											  <p>游客134: 还没开始</p>
+											  <p>游客135: 那人是谁</p>
+											  <p>游客136: 吓我一跳</p>
+											  <p>游客137: 为了55 我用的流量，不要让我失望</p>
+											  <p>游客139: 75用户路过。。。。</p>
+											  <p>游客141: 价格没优势肯定卖不动</p>
+											  <p>游客142: 看直播的人不多呢感觉</p>
+											  <p>游客143: 好多人</p>
+											  <p>游客155: 车子不错很好，关键看定价</p>
+											  <p>游客158: 长安口碑不错了</p>
+											  <p>&nbsp;</p>
+											  <p>&nbsp;</p>
+											  <p>&nbsp;</p>
+											  <p>&nbsp;</p>
+											  
+										</div>
+									</div>
+									<div class="live-container_box_bar-emobox">
+										<img class="toolbar-emotion" src="pc/live_plugin/images/icon-emotion.png" />
+									</div>
+									<div class="live-container_box_bar-msgbox" id="live-msgbox">
+										<div class="bjy-message-sender" id="live-msgbox" data-forbiden="0">
+											<!-- <span class="toolbar-input-box">
+												<textarea name="" class="toolbar-input" id="publicmsg" placeholder="来一发" rows='1'></textarea>
+												<span class="toolbar-send">发送</span>
+											</span> -->
+											<div class="bjy-no-forbiden">
+												<input id="msginput" type="text">
+												<div class="bjy-action-bar">
+													<div class="bjy-float">
+														<button class="bjy-button bjy-send-message" disabled="true">发送</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <span class="toolbar-input-box">
+											<textarea name="" class="toolbar-input" id="publicmsg" placeholder="来一发" rows='1'></textarea>
+											<span class="toolbar-send">发送</span>
+										</span> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--登陆结束-->
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div> 
+			<div class="swiper-slide d-fish">
+				<div class="d-page">
+					<img src="pc/images/bg_live.jpg" class="d-bg"/>
+					<img src="pc/images/txt_fish1.png" class="d-txt leftTop animated"/>
+					<img src="pc/images/txt_fish2.png" class="d-txt leftTop animated"/>
+					<img src="pc/images/fish.png" class="d-fish-fish"/>
+				</div> 
+				<div class="man">
+					<img src="pc/images/man.png" class="d-img"/>
+					<div class="d-fish-txt">
+					汽车频道专业评车MC担当
+					<h2>仲洋</h2>
+					<img src="pc/images/switch_btn.png" class="d-btn-switch" data-link='man.mp4'/>
+					</div>
+				</div>
+				<div class="woman">
+					<img src="pc/images/woman.png" class="d-img"/>
+					<div class="d-fish-txt">
+					颜值爆表 女主播
+					<h2>欢欢女神</h2>
+					<img src="pc/images/switch_btn.png" class="d-btn-switch" data-link='woman.mp4'/>
+					</div>
+				</div>
+				<div class="live-container">
+					<div class="live-title">
+						<div class="changanBox">
+							<img  src="pc/live_plugin/images/changan_v.png" class="v fl">
+							<div class="officialText fl">
+								<p>长安汽车微信公众号</p> 
+							</div>
+						</div>
+						<div class="moni">
+							<img  src="pc/live_plugin/images/guanzhu2.png" />
+						</div>
+						<img  src="pc/images/qrcode.png" class="d-qrcode" />
+					</div>
+					<div class="d-fish-box"> 
+						<!-- <iframe src="" width='100%' frameborder='0' id="fish-box"></iframe> -->
+						<img src="pc/images/poster.jpg" class="d-poster"/>
+						<img src="pc/images/player_icon.png" class="d-player-icon" data-link="woman.mp4"/> 
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>
+			<div class="swiper-slide d-exterior">
+				<div class="d-page">
+					<img src="pc/images/bg_exterior.jpg" class="d-bg"/> 
+					<img src="pc/images/left.png" class="d-left"/> 
+					<img src="pc/images/right.png" class="d-right"/> 
+					<div class="d-btn-item">
+						<div class="red" data-color="red"><span>炫动红</span></div>
+						<div class="blue" data-color="blue"><span>繁星蓝</span></div>
+					</div>
+					<div class="d-car">
+						<div class="d-carframes">
+							<div id="carframes"></div>
+						</div> 
+					</div>
+					<div class="d-txt">
+						<h2>外观Exterior</h2>
+						<p>长安欧洲设计团队打造 从长安“智色双旋”设计理念出发<br/>
+						以分色悬浮式车顶 炫动红轿跑式喷涂等等等等无数伟大设计<br/>
+						呈现出惊艳的生命动感美学</p>
+						<!-- <a href="http://www.changan.com.cn/car/cs55" target="_blank" class="d-more">了解更多</a> -->
+					</div>
+					<img src="pc/images/icon_360.png" class="d-icon-360"/>
+					<div class="d-icon-item">
+						<img src="pc/images/icon1_exterior.png" class="d-icon-ring"/>
+						<img src="pc/images/icon2_exterior.png" class="d-icon-ring d-icon-ring2"/>
+						<ul class="clearfix">
+							<li>分色悬浮式车顶</li>
+							<li>炫动红轿跑式喷涂</li>
+							<li>LED炫酷灯光</li>
+							<li>X元素座舱设计</li>
+						</ul>
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>
+			<div class="swiper-slide d-interior">
+				<div class="d-page">
+					<!---<img src="pc/images/bg_interior.jpg" class="d-bg"/>-->
+					<div id="pano" style="width:100%;height:100%;">
+						<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+						<script>
+							embedpano({swf:"pc/scripts/tour.swf", xml:"pc/scripts/tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+						</script>
+					</div
+					<!-- <img src="pc/images/mask_interior.png" class="d-mask-interior"/> -->
+					<img src="pc/images/left.png" class="d-left"/> 
+					<img src="pc/images/right.png" class="d-right"/> 
+					<img src="pc/images/icon_360.png" class="d-icon-360"/>
+					<div class="d-txt">
+						<h2>内饰Interior</h2>
+						<p>如同匠人量身定制的成衣一般<br/>
+						设计师精心选择与每处内饰匹配的材质 炫动色彩 镀铬质感 匠心缝线藏入细节中<br/>
+						让你迫不及待地渴望深入探索</p>
+						<!-- <a href="http://www.changan.com.cn/car/cs55" target="_blank" class="d-more">了解更多</a> -->
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>
+			<div class="swiper-slide d-comfortable"> 
+				<div class="d-page">
+					<img src="pc/images/bg_comfortable.jpg" class="d-bg2"/>
+					<div class="d-txt">
+						<h2>舒适Comfortable</h2>
+						<p>豪华的宽体设计 兼具轻盈操控感<br/>
+						采用智能化生产线制造 确保每一环节质量,并以太空静音级NVH呈现出超卓品质<br/>
+						一路尽兴驰骋 让惬意乐趣超越你的想象</p>
+						<!-- <a href="http://www.changan.com.cn/car/cs55" target="_blank" class="d-more">了解更多</a> -->
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>	
+			<div class="swiper-slide d-safety"> 
+				<div class="d-page">
+					<img src="pc/images/bg_safety.jpg" class="d-bg"/>
+					<img src="pc/images/car_safety.png" class="d-car"/>
+					<div class="d-txt">
+						<h2>智能安全</h2>
+						<p>搭载ACC全速自适应巡航系统等等等等多种智能安全技术<br/>
+						新版in Call智能车载互联系统随时待命<br/>
+						增强版车身安全舱设计 时刻化隐患于无形 捍卫你的驾驭乐趣</p>
+						<div class="d-icon-item">
+							<img src="pc/images/icon1_safety.png" class="d-icon-ring"/>
+							<ul class="clearfix">
+								<li>ACC全速自适应巡航系统</li>		
+								<li>PAB预警辅助制动系统</li>
+								<li>LDW车道偏离预警</li>
+								<li>360°全景影像</li>
+								<li>LDW车道 偏离预警</li>
+								<li>TPMS智能 胎压监测</li>
+							</ul>
+						</div>
+						<!-- <a href="http://www.changan.com.cn/car/cs55" target="_blank" class="d-more">了解更多</a> -->
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>	 
+			<div class="swiper-slide d-power"> 
+				<div class="d-page">
+					<img src="pc/images/bg_power.jpg" class="d-bg"/>
+					<img src="pc/images/car_power.png" class="d-car"/>
+					<div class="d-txt">
+						<h2>动力</h2>
+						<p>Blue Core新款1.5T VVT DOHC全铝发动机<br/>
+						最大总功率115KW 最大扭矩225N.m 最大功率转速5500RPM<br/>
+						磅礴动力为疾驰而生<br/>
+						同时配备STT智能节油 爱信6速手自一体 随时随地用车无忧</p>
+						<!-- <a href="http://www.changan.com.cn/car/cs55" target="_blank" class="d-more">了解更多</a> -->
+					</div>
+				</div>
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div>	 
+			<div class="swiper-slide d-news">
+				<div class="d-page">
+					<img src="pc/images/bg_news.jpg" class="d-bg"/> 
+					<img src="pc/images/txt_news1.png" class="d-txt leftTop animated"/>
+					<img src="pc/images/txt_news2.png" class="d-txt leftTop animated"/>
+					<div class="d-news-wrap">
+						<img src="pc/images/arrowL.png" class="d-arrow d-arrowL"/> 
+						<img src="pc/images/arrowR.png" class="d-arrow d-arrowR"/> 
+						 <div class="swiper-container news-container">
+						  <div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1441.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news9.jpg"/>
+											<h2>新车评网：终于等到你 长安CS55将于7月26日夺目上市！</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1442.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news10.jpg"/>
+											<h2>汽车公社：从今往后一万年，你们都还会记住我名字</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1438.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news1.jpg"/>
+											<h2>爱卡汽车：长安CS55配置曝光 推7款车/7月26日上市</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1439.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news2.jpg"/>
+											<h2>搜狐汽车：长安CS55就快上市，先来看看配置如何</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1426.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news3.jpg"/>
+											<h2>车讯网：进口品质的国产SUV 车讯网试驾长安CS55</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1427.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news4.jpg"/>
+											<h2>人民网：兑现你的期待 人民网试驾长安CS55</h2> 
+										</div>
+									</a>
+								</div>
+								
+							</div> 
+							<div class="swiper-slide">
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1424.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news5.jpg"/>
+											<h2>凤凰汽车：试驾长安CS55 具备爆款实力的新颜值担当</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1420.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news6.jpg"/>
+											<h2>新浪汽车：时尚新宠 车小鬼大 试驾长安汽车CS55</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1425.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news7.jpg"/>
+											<h2>网通社：集大哥小弟优势于一身 试长安CS55 1.5T</h2> 
+										</div>
+									</a>
+								</div>
+								<div class="news-item">
+									<a href="http://www.changan.com.cn/news/mtzs/1421.html" target="_blank">
+										<div class="d-content-box">
+											<img src="pc/images/news8.jpg"/>
+											<h2>汽车之家：值得等下去 试驾长安CS55 1.5T自动挡</h2> 
+										</div>
+									</a>
+								</div>
+								
+							</div> 
+						  </div>
+						  <div class="pagination"></div>
+						</div>
+					</div>
+					<div class="d-tip">
+						<a href="javascript:swipeTo(6);">预约试驾</a>
+					</div>
+				</div> 
+				<a href="javascript:;" class="d-scrollDown"><img src="pc/images/scrollDown.png" /></a>
+			</div> 
+			<div class="swiper-slide d-message">
+				<div class="d-page">
+					<img src="pc/images/bg_testdrive.jpg" class="d-bg"/>
+					<img src="pc/images/txt_message1.png" class="d-txt leftTop animated"/> 
+					<img src="pc/images/txt_message2.png" class="d-txt leftTop animated"/> 
+					<!-- 留言列表 -->
+					<div class="message-box">
+						<img src="pc/images/message_bg.png" class="d-img"/>
+						<h2>互动评论</h2>
+						<div class="nano has-scrollbar message-txt-box">
+							<div class="nano-content">
+								<ul>   
+									
+								</ul>
+							</div>
+						</div>
+						<a target="_blank" style="cursor: pointer" href="http://club.changan.com.cn/forum.php?mod=viewthread&tid=36960&page=1&extra=#pid442861"><img src="pc/images/btn_message.png" class="message-btn"/></a>
+					</div>
+					 
+				</div> 
+			</div>	
+			<div class="swiper-slide d-testdrive">
+				<div class="d-page">
+					<img src="pc/images/bg_testdrive.jpg" class="d-bg"/>
+					<img src="pc/images/txt_testdrive1.png" class="d-txt rightTop animated"/> 
+					<img src="pc/images/txt_testdrive2.png" class="d-txt rightTop animated"/> 
+						<!-- 预约试驾 -->
+						<div class="main-box">
+							<div class="form-box">
+								<ul class="float-select clearfix">
+									<li class="input-item">
+										<span>姓名<b>name</b></span>
+										<input type="text" name="uname" class="h-input_cti" value=""  id="uname"  >
+									</li>
+									<li class="input-item">
+										<span>手机号<b>mobile</b></span>
+										<input type="text" name="umobile" class="h-input_cti" value="" id="umobile">
+									</li> 
+									<li class="sel-item">
+										<div class="h-sel_wrap fl" data-model="ctype" style="">
+											<label></label>
+											<span>选择省份<b>province</b></span>
+											<select class="h-select_cti" name="provinces" id="province">
+												<option value="">省份</option>
+											</select>
+										</div>
+										<div class="h-sel_wrap fl" data-model="ctype" style="">
+											<label></label>
+											<span>选择城市<b>city</b></span>
+											<select class="h-select_cti" name="city" id="city">
+												<option value="">城市</option>
+											</select>
+										</div>
+										<div class="h-sel_wrap fr" data-model="ctype" style="">
+											<label>地区</label>
+											<span>选择地区<b>town</b></span>
+											<select class="h-select_cti" name="town" id="town">
+												<option value="">地区</option>
+											</select>
+										</div>
+									</li> 
+									<li>
+										<div class="h-sel_wrap" data-model="ctype" style="">
+											<label></label>
+											<span>选择经销商<b>Choose</b></span>
+											<select class="h-select_cti" name="dealer" id="dealer">
+												<option value="">城市</option>
+											</select>
+										</div>
+									</li> 									
+								</ul>
+							</div>
+							<div class="submit" id="submitdrive"> 提交 </div>
+						</div>
+					<div class="footer">
+						<div class="d-line-text"><img src="pc/images/more_tit.png"/></div>
+						<div class="d-icon">
+							<a href="javascript:swipeTo(0);"><img src="pc/images/icon1.png"><span>返回首页</span></a>
+							<a href="http://www.changan.com.cn/" target="_blank"><img src="pc/images/icon2.png"><span>返回官网</span></a>
+							<a href="http://club.changan.com.cn/portal.php" target="_blank"><img src="pc/images/icon3.png"><span>前往社区</span></a> 
+							<a href="http://www.changan.com.cn/car/cs55" target="_blank"><img src="pc/images/icon4.png"><span>车型详情</span></a> 
+						</div>
+					</div> 
+				</div> 
+			</div>	
+		</div>
+	</div>
+</div>   
+<video id="myVideo" class="video-js vjs-default-skin" controls preload="none" width="800" height="400" poster="" data-setup="{}">
+<source src="pc/video/video.mp4" type='video/mp4' />
+<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+
+
+<div class="video-mask">
+<video id="myVideo2" class="video-js vjs-default-skin" controls preload="none" width="800" height="400" poster="" data-setup="{}">
+<source src="pc/video/video.mp4" type='video/mp4' />
+<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+</div>
+
+<script src="pc/scripts/idangerous.swiper2.7.6.min.js"></script>
+<script src="pc/scripts/jquery.imgpreload.min.js"></script>
+<script src="pc/scripts/jquery.spritespin.min.js"></script> 
+<script src="pc/scripts/dealers.js"></script> 
+<script src="pc/scripts/testdrive.js"></script> 
+<script src="pc/scripts/jquery.downCount.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="pc/live_plugin/js/jquery.placeholder.min.js"></script>
+<script src="pc/live_plugin/images/emotion/icon.js" type="text/javascript" charset="utf-8"></script>
+<script src="pc/live_plugin/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="pc/live_plugin/js/jquery.nanoscroller.js" type="text/javascript" charset="utf-8"></script>
+<!--[if (IE 8)|(IE 9) ]>
+<script>
+    var WEB_SOCKET_DEBUG = true;
+    var WEB_SOCKET_SWF_LOCATION = 'pc/live_plugin/js/WebSocketMainInsecure.swf';
+</script>
+<script src="pc/live_plugin/js/swfobject.js"></script>
+<script src="pc/live_plugin/js/web_socket.js"></script>
+<![endif]-->
+<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.371/classroom/classroom.js"></script>
+<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.371/barrage/Barrage.js"></script>
+<script src="//www.baijiacloud.com/js-sdk/0.0.371/message/messageList/MessageList.js"></script>
+<script src="//www.baijiacloud.com/js-sdk/0.0.371/message/messageSender/MessageSender.js"></script>
+<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.371/player/player.js"></script>
+<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.371/player/core/Player.js"></script>
+<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.371/player/extension/flash.js"></script>
+<script type="text/javascript" src="pc/live_plugin/js/live_baijiayun.js?v=12"></script>
+<script src="pc/scripts/index.js?v=18"></script> 
+<script type="text/javascript" src="pc/swfobject.js">
+</script>
+<script>
+	var baseurl = 'php/';
+	$(function(){ 
+		$(".d-follow").click(function(){
+			$(".d-qrcode").slideToggle();
+		});
+		LoadForumData();
+	});
+	function LoadForumData(){
+		$.get('api.php?action=forum',function(data){
+			var rsp = eval('('+data+')');
+			ForumData(rsp); 
+		}); 
+	} 
+	Date.prototype.format = function(format) {
+       var date = {
+              "M+": this.getMonth() + 1,
+              "d+": this.getDate(),
+              "h+": this.getHours(),
+              "m+": this.getMinutes(),
+              "s+": this.getSeconds(),
+              "q+": Math.floor((this.getMonth() + 3) / 3),
+              "S+": this.getMilliseconds()
+       };
+       if (/(y+)/i.test(format)) {
+              format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+       }
+       for (var k in date) {
+              if (new RegExp("(" + k + ")").test(format)) {
+                     format = format.replace(RegExp.$1, RegExp.$1.length == 1
+                            ? date[k] : ("00" + date[k]).substr(("" + date[k]).length));
+              }
+       }
+       return format;
+	}
+	var getLocalTime = function(nS) {
+		var newDate = new Date();
+		newDate.setTime(nS * 1000);
+		return newDate.format('yyyy/MM/dd h:m:s') 
+	}
+	function ForumData(data)
+	{
+		var h = $(window).height(); 
+		
+		for(var i=0;i<data.posts.length;i++){ 
+			var str = '<li><p>'+data.posts[i].message+'</p>'+
+							'<div class="d-info">'+
+								'发布人：<span>'+data.posts[i].author+'</span>　发布时间：<span>'+ getLocalTime(data.posts[i].dateline)+'</span>'+
+							'</div>'+
+						'</li>';
+			//console.log(str);
+			$(".message-txt-box .nano-content ul").append(str); 
+		} 
+		$(".message-txt-box .nano").nanoScroller({ scroll: 'top' }); 
+		// var height = 0;
+		// var maxHeight = $("#bg7_box").outerHeight(true);   
+		// var list = $("#bg7_ul li");
+		// for(var i=0;i<list.length;i++){
+		// 	var h = $(list[i]).outerHeight(true);
+		// 	height+=h;	
+		// 	if(height>maxHeight){
+		// 		for(var j=i;j<list.length;j++){ 
+		// 			$(list[j]).remove();
+		// 		}
+		// 		break; 
+		// 	}
+		// }
+	}
+</script>  
+</body>
+</html>

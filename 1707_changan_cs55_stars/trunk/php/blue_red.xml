@@ -1,0 +1,314 @@
+<krpano version="1.19" title="Virtual Tour">
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+	<autorotate enabled="true"
+	waittime="2.0"
+	speed="-10.0"
+	horizon="0.0"
+	/>
+
+	<scene name="scene_blue" title="blue" onstart="" havevrimage="true" thumburl="panos/blue.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-934.007" vlookat="-1.921" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="range" vlookatmin="-54.821" vlookatmax="54.821" />
+
+		<preview url="panos/blue.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/blue.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/blue.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	<hotspot name="hs3" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         backup_onclick=""
+	         backup_ondown=""
+	         backup_onhover=""
+	         backup_onout=""
+	         backup_onover=""
+	         backup_onup=""
+	         onclick="js(clue(8));"
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         >
+		<point ath="0.648414" atv="-51.663503" />
+		<point ath="28.053816" atv="-52.874029" />
+		<point ath="28.920683" atv="-41.515078" />
+		<point ath="-0.793951" atv="-42.026618" />
+	</hotspot>
+
+	<hotspot name="hs2" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         backup_onclick=""
+	         backup_ondown=""
+	         backup_onhover=""
+	         backup_onout=""
+	         backup_onover=""
+	         backup_onup=""
+	         onclick="js(clue(9));"
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         >
+		<point ath="160.71848" atv="-33.954753" />
+		<point ath="171.456726" atv="-33.273566" />
+		<point ath="171.841715" atv="-20.668937" />
+		<point ath="160.628511" atv="-22.432836" />
+	</hotspot>
+
+	<hotspot name="hs1" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         backup_onclick=""
+	         backup_ondown=""
+	         backup_onhover=""
+	         backup_onout=""
+	         backup_onover=""
+	         backup_onup=""
+	         onclick="js(clue(10));"
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         >
+		<point ath="102.987675" atv="-22.317078" />
+		<point ath="103.210087" atv="-13.446043" />
+		<point ath="117.600914" atv="-15.44525" />
+		<point ath="117.640424" atv="-26.767437" />
+		<point ath="117.640424" atv="-26.767437" />
+	</hotspot>
+
+	<hotspot name="hs4" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(11));"
+	         >
+		<point ath="-91.322745" atv="24.613865" />
+		<point ath="-68.147802" atv="24.881447" />
+		<point ath="-68.850683" atv="37.416295" />
+		<point ath="-93.027194" atv="36.120757" />
+	</hotspot>
+
+	<hotspot name="hs5" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(12));"
+	         >
+		<point ath="-94.100924" atv="-36.430587" />
+		<point ath="-77.082852" atv="-35.563167" />
+		<point ath="-77.454857" atv="-26.692037" />
+		<point ath="-94.84511" atv="-27.932458" />
+	</hotspot>
+
+	<hotspot name="hs6" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(13));"
+	         >
+		<point ath="-149.367199" atv="39.563969" />
+		<point ath="-133.813453" atv="37.280592" />
+		<point ath="-133.529897" atv="44.882488" />
+		<point ath="-150.16947" atv="46.056872" />
+	</hotspot>
+
+	<hotspot name="hs7" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(14));"
+	         >
+		<point ath="-156.078818" atv="-38.206227" />
+		<point ath="-140.837523" atv="-38.200616" />
+		<point ath="-141.663671" atv="-26.488552" />
+		<point ath="-156.866543" atv="-26.969061" />
+	</hotspot>
+
+	<hotspot name="hs8" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(15));"
+	         >
+		<point ath="33.783974" atv="-41.145443" />
+		<point ath="46.054797" atv="-38.869134" />
+		<point ath="45.448716" atv="-29.554244" />
+		<point ath="32.5829" atv="-29.088318" />
+	</hotspot>
+
+	<hotspot name="hs9" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="0" bordercolor="0xaaaaaa" borderalpha="0" 
+	         depth="1000"
+	         polyline="false"
+	         scaleflying="true"
+	         tx="0"
+	         ty="0"
+	         tz="0"
+	         onclick="js(clue(16));"
+	         >
+		<point ath="17.393671" atv="30.938059" />
+		<point ath="41.501" atv="31.133875" />
+		<point ath="40.366546" atv="39.731731" />
+		<point ath="14.363562" atv="39.22167" />
+	</hotspot>
+	</scene>
+
+	<scene name="scene_red" title="red" onstart="" thumburl="panos/red.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="range" vlookatmin="-54.821" vlookatmax="54.821" />
+
+		<preview url="panos/red.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/red.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/red.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<!-- place your scene hotspots here -->
+		
+
+		<hotspot name="hs1" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="3.0" bordercolor="0xaaaaaa" borderalpha="0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(1));"
+		         >
+			<point ath="-41.229867" atv="20.283019" />
+			<point ath="-24.552725" atv="19.74951" />
+			<point ath="-24.123022" atv="29.473717" />
+			<point ath="-42.243387" atv="28.378709" />
+			<point ath="-42.243387" atv="28.378709" />
+		</hotspot>
+
+		<hotspot name="hs2" fillcolor="0xaaaaaa" fillalpha="0" borderwidth="3.0" bordercolor="0xaaaaaa" borderalpha="0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(2));"
+		         >
+			<point ath="-21.960285" atv="-42.163467" />
+			<point ath="-21.430422" atv="-36.201174" />
+			<point ath="-7.215418" atv="-37.114789" />
+			<point ath="-7.440657" atv="-43.037574" />
+		</hotspot>
+
+		<hotspot name="hs3" fillcolor="0xffffff" fillalpha="0.0" borderwidth="0.0" bordercolor="0xffffff" borderalpha="0.0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(3));"
+		         >
+			<point ath="-91.907691" atv="-18.183617" />
+			<point ath="-83.772149" atv="-18.573567" />
+			<point ath="-84.077189" atv="0.380941" />
+			<point ath="-92.41568" atv="0.480439" />
+		</hotspot>
+
+		<hotspot name="hs4" fillcolor="0xffffff" fillalpha="0.0" borderwidth="0.0" bordercolor="0xffffff" borderalpha="0.0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(4));"
+		         >
+			<point ath="136.173472" atv="-19.234553" />
+			<point ath="141.48844" atv="-14.263382" />
+			<point ath="149.01458" atv="-19.085996" />
+			<point ath="143.422496" atv="-24.117336" />
+		</hotspot>
+
+		<hotspot name="hs5" fillcolor="0xffffff" fillalpha="0.0" borderwidth="0.0" bordercolor="0xffffff" borderalpha="0.0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(5));"
+		         >
+			<point ath="85.293962" atv="40.864336" />
+			<point ath="91.101198" atv="46.66702" />
+			<point ath="103.313846" atv="41.46365" />
+			<point ath="96.979569" atv="35.592727" />
+		</hotspot>
+
+		<hotspot name="hs6" fillcolor="0xffffff" fillalpha="0.0" borderwidth="0.0" bordercolor="0xffffff" borderalpha="0.0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(6));"
+		         >
+			<point ath="98.178372" atv="-49.247277" />
+			<point ath="108.095523" atv="-48.41475" />
+			<point ath="107.164375" atv="-38.370569" />
+			<point ath="97.907656" atv="-38.850729" />
+		</hotspot>
+
+		<hotspot name="hs7" fillcolor="0xffffff" fillalpha="0.0" borderwidth="0.0" bordercolor="0xffffff" borderalpha="0.0" 
+		         depth="1000"
+		         polyline="false"
+		         scaleflying="true"
+		         tx="0"
+		         ty="0"
+		         tz="0"
+				 onclick="js(clue(7));"
+		         >
+			<point ath="-66.802931" atv="14.176867" />
+			<point ath="-68.086868" atv="23.548415" />
+			<point ath="-55.770374" atv="27.302818" />
+			<point ath="-53.874419" atv="17.088792" />
+		</hotspot>
+	</scene>
+
+
+</krpano>

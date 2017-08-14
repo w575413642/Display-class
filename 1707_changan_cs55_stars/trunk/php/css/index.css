@@ -1,0 +1,212 @@
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #D0D0D0;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+.loading-mask{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: black;
+}
+
+
+.logo .fixed{
+	z-index: 20;
+}
+.swiper-container .swiper-wrapper .swiper-slide {
+    overflow: hidden;
+}
+.main-container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+  z-index: 10;
+}
+/*第一屏开始*/
+.page1 .btn-wrap{
+  /* margin-bottom: 43.4%; */
+  bottom: auto;
+  top: 80%;
+}
+.page1 .pupup-page1{
+  width:100%;
+  visibility:hidden;
+  display: block;
+}
+.page1 .pupup-page1 .swiper-slide{
+    float: left;
+}
+.pupup-page1 .prev,
+.pupup-page1 .next{
+    width: 26px;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 10;
+}
+.pupup-page1 .prev{
+  left: 10px;
+}
+.pupup-page1 .next{
+  right: 10px;
+}
+.page1 .btn-wrap .btn{
+	width: 20%;
+	margin-left: 10%;
+	float: left;
+}
+/*第一屏结束*/
+
+/*第五屏开始*/
+::-webkit-input-placeholder {
+	color:#d1d1d1;
+	font-size:16px;
+}
+::-moz-placeholder { 
+	color: #d1d1d1;
+	font-size:16px;
+}
+::-webkit-input-placeholder {
+	color:#d1d1d1;
+	font-size:16px;
+}
+.page5 .content{
+	width: 66%;
+}
+/*切换登录注册*/
+.page5 .login-or-sign{
+	font-size: 15px;
+	color: #fff;
+	margin:8%;
+}
+.page5 .content-login{
+	margin:57% 0 0 17%;
+}
+.page5 .content-sign{
+	display: none;
+	margin:43% 0 0 17%;
+}
+.page5 .content .m-form{
+	overflow: hidden;
+}
+.page5 .content input{
+	width:100%;
+	display:block;
+	font-size:16px;
+	line-height: 35px;
+	color:#666;
+	text-indent: 1em;
+	box-sizing:border-box;
+	margin-bottom: 7.4%;
+	outline: none;
+	border:1px solid #626673;
+}
+.page5 .content-login input{
+	margin-bottom: 14%;
+}
+.page5 .code input{
+	width: 60%;
+	float: left;
+}
+.page5 .code .getCode{
+	width: 36%;
+	height: 37px;
+	float: right;
+	font-size: 12px;
+	line-height: 1;
+	background: #fff;
+	color:#4b4c4e;
+	text-align: center;
+	/*padding:6.5px 0 ;*/
+	display: table;
+}
+.page5 .code .getCode span{
+	display: table-cell;
+	vertical-align: middle;
+}
+.submit {
+	width:70%;
+	margin:7% auto 0;
+}
+.content-login .submit{
+	margin:20% auto 0;
+}
+/*第五屏结束*/
+/*向下的提示按钮*/
+.todown {
+    width: 20px;
+    position: fixed;
+    margin: 0 0 4% -10px;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    animation: shan 0.8s infinite alternate;
+}
+@keyframes shan {
+    0% {
+    	transform: translate3d(0,20px,0);
+    }
+    100% {
+    	transform: translate3d(0,0px,0);
+        /*opacity: 0;*/
+    }
+}

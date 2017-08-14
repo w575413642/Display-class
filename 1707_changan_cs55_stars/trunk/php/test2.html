@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>CS55占座行动，旅行试驾、豪礼大奖等你来！</title>
+		<meta name="keywords" itemprop="name" content="">
+		<meta name="description" itemprop="description" content="上海车展参与CS55活动，豪礼送不停！更有机会赢取旅行试驾大奖，你还在等什么！">
+		<meta name="content" itemprop="image" content="上海车展参与CS55活动，豪礼送不停！更有机会赢取旅行试驾大奖，你还在等什么！">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<base href='http://192.168.254.108/1707_changan_cs55_stars/trunk/php/' />
+		<link href="css/swiper.css" rel="stylesheet" type="text/css">
+		<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+		<link href="css/common.css" rel="stylesheet" type="text/css">
+		<link href="css/index.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/pano2vr_player.js">
+		</script>
+		<script type="text/javascript" src="js/pano2vrgyro.js">
+		</script>
+		<style type="text/css">
+			.width100 {
+				width: 100%;
+			}
+			
+			.page_bg {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				background-size: 100%;
+				background-position: center;
+			}
+			
+			.pic {
+				width: 100%;
+			}
+			
+			.loading_bg {
+				background-image: url('images/loading.gif');
+				z-index: 999;
+			}
+			/* page1 */
+			
+			.page1_bg {
+				background-image: url('images/page1/page1_bg.jpg');
+				z-index: 888;
+			}
+			
+			.page1_title1 {
+				width: 35%;
+				top: 10%;
+				position: absolute;
+				left: 60%;
+			}
+			
+			.page1_title2 {
+				width: 100%;
+				top: 10%;
+				position: absolute;
+			}
+			
+			.page1_btn_desc {
+				position: absolute;
+				bottom: 13%;
+			}
+			
+			.page1_bottom {
+				position: absolute;
+				bottom: 5%;
+			}
+			/* page2 */
+			
+			.page2_font_gif {
+				position: absolute;
+				width: 100%;
+				bottom: 5%;
+			}
+			
+			.pagegif_bottom {
+				bottom: 3%;
+				position: absolute;
+			}
+			
+			.text_box {
+				position: absolute;
+				bottom: 10%;
+				width: 80%;
+				left: 10%;
+				z-index: 1111;
+			}
+			
+			.text_box p {
+				color: #fff;
+				font-size: 12px;
+				line-height: 20px;
+				text-align: center;
+			}
+			
+			.lo {
+				position: absolute;
+				z-index: 999999;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				display: none;
+			}
+			
+			.choose {
+				position: relative;
+				width: 100%;
+			}
+			
+			.b {
+				position: absolute;
+				left: 11%;
+				top: 32%;
+				width: 40%;
+				animation: mymove 1s infinite;
+				-webkit-animation: mymove 1s infinite;
+				/* Safari 和 Chrome */
+			}
+			
+			.r {
+				position: absolute;
+				right: 7%;
+				top: 19%;
+				width: 20%;
+				animation: mymove 1s infinite;
+				-webkit-animation: mymove 1s infinite;
+				/* Safari 和 Chrome */
+			}
+			
+			.layer {
+				background: url('images/layer.png') repeat;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+				right: 0px;
+				z-index: 9999;
+				transition: .6s all;
+				margin-top: -200%;
+			}
+			
+			.la5,
+			.la4,
+			.la3,
+			.la2,
+			.la1 {
+				background: url('images/layer.png') repeat;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0px;
+				right: 0px;
+				z-index: 9999;
+				transition: .6s all;
+				display: none;
+				margin-top: 0%;
+			}
+			
+			.la2 {
+				display: none;
+			}
+			
+			.la3 {
+				margin-top: -200%;
+				display: block;
+				z-index: 999999999;
+			}
+			
+			.la4 {
+				display: block;
+				margin-top: 200%;
+				z-index: 99999999;
+			}
+			.la5 {
+				display: block;
+				    z-index: 9999999999;
+			}
+			.la3 .box {
+				padding-top: 20%;
+			}
+			.la5 .box {
+				padding-top: 10%;
+			}
+			.la2 .box {
+				padding-top: 30%;
+			}
+			
+			.la1 .box,
+			.layer .box {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.clo {
+				position: absolute;
+				right: 5%;
+				top: 2%;
+				z-index: 9999;
+				width: 14%;
+			}
+			
+			.theme {
+				width: 45%;
+				margin: auto;
+				display: block;
+				padding-top: 20%;
+			}
+			
+			.la2 .box .theme {
+				padding-top: 10%;
+			}
+			
+			.msg .top {
+				width: 100%;
+				margin-top: 4%;
+				margin-bottom: 6%;
+			}
+			
+			.msg .bottom {
+				width: 100%;
+				margin-top: 6%;
+			}
+			
+			.msg input {
+				display: block;
+				width: 80%;
+				margin: auto;
+				height: 40px;
+				margin-bottom: 5%;
+				margin-top: 5%;
+				font-size: 16px;
+				text-align: center;
+			}
+			
+			.msg {
+				width: 80%;
+				margin: auto;
+			}
+			
+			.submit-msg {
+				display: block;
+				margin: auto;
+				width: 50%;
+				margin-top: 6%;
+			}
+			
+			.la2 .box h2 {
+				text-align: center;
+				color: white;
+				font-size: 23px;
+				margin: 10% auto 2%;
+				width: 80%;
+			}
+			
+			.la2 .small {
+				font-size: 14px;
+				width: 60%;
+				text-align: center;
+				color: white;
+				margin: 0px auto 8%;
+			}
+			
+			.la4 .box {
+				margin-top: 10%;
+			}
+			
+			.la1 .box h2,
+			.layer .box h2 {
+				text-align: center;
+				color: white;
+				font-size: 25px;
+				margin: 4% auto 0px;
+				width: 80%;
+			}
+			
+			.color-w {
+				color: white;
+				font-size: 30px;
+				text-align: center;
+			}
+			
+			.box .btn .left {
+				float: left;
+				width: 50%;
+				/*margin: 0px 5%;*/
+			}
+			
+			.box .btn .right {
+				float: right;
+				width: 50%;
+				/*margin: 0px 5%;*/
+			}
+			
+			.wid-3 {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			.wid-3 img {
+				width: 33.333%;
+				display: block;
+				float: left;
+			}
+			
+			.wid-2 {
+				width: 66.6666%;
+				margin: auto;
+				overflow: hidden;
+				margin-bottom: 1%;
+			}
+			
+			.wid-2 img {
+				width: 50%;
+				display: block;
+				float: left;
+			}
+			
+			.video {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+			}
+			
+			.video img {
+				width: 100%;
+			}
+			
+			#myCanvas {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+			}
+			
+			input::-webkit-input-placeholder {
+				/* placeholder颜色  */
+				color: black;
+			}
+			
+			.car-title {
+				color: white;
+				text-align: center;
+				font-size: 22px;
+			}
+			
+			.video {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+			}
+			
+			.imgt {
+				position: absolute;
+				bottom: 8%;
+				width: 70%;
+				display: block;
+				/* margin: auto; */
+				left: 15%;
+			}
+			
+			.imgb {
+				position: absolute;
+				bottom: 2%;
+				width: 70%;
+				display: block;
+				/* margin: auto; */
+				left: 15%;
+			}
+			.nus, 
+			.yus {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			.nus .us,
+			.yus .us{
+				width: 100%;
+			}
+			.bor{
+				position: relative;
+			}
+			.click{
+				position: absolute;
+				bottom: 17%;
+				width: 100%;
+				left: 0px;
+			}
+			.lo-5{
+				position: absolute;
+			    top: 86.5%;
+			    right: 1%;
+			    width: 19%;
+			}
+			.filter {
+			    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+			    filter: grayscale(100%);
+			    opacity: .5;
+			}
+			@keyframes mymove {
+				from {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.4;
+				}
+			}
+			/* swiper */
+		</style>
+		<!-- vr style -->
+		<style>
+		body, div, h1, h2, h3, span, p {
+				font-family: Verdana,Arial,Helvetica,sans-serif;
+				color: #000000; 
+			}
+			body {
+			  font-size: 10pt;
+			  background : #ffffff; 
+			}
+			table,tr,td {
+				font-size: 10pt;
+				border-color : #777777;
+				background : #dddddd; 
+				color: #000000; 
+				border-style : solid;
+				border-width : 2px;
+				padding: 5px;
+				border-collapse:collapse;
+			}
+			h1 {
+				font-size: 18pt;
+			}
+			h2 {
+				font-size: 14pt;
+			}
+			.warning { 
+				font-weight: bold;
+			} 
+			/* fix for scroll bars on webkit & Mac OS X Lion */ 
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+    			background-color:  rgba(255,255,255,0.5);
+			}
+			#container1{
+				width: 100%;
+			    height: auto;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    transition: .8s all;
+			}
+			#container2{
+				width: 100%;
+			    height: auto;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    z-index: 99;
+			    transition: .8s all;
+			}
+			.cont-tab{
+		    position: absolute;
+		    left: 0px;
+		    bottom: 1%;
+		    width: 100%;
+		    z-index: 99999;
+			}
+			.cont-tab div{
+			width: 35%;
+		    float: left;
+		    margin: 0px 7.5%;
+		    text-align: center;
+		    padding: 8px 0px;
+		    border-radius: 10px;
+		    color: white;
+			}
+			.ser{
+				background: #0f97be;
+			}
+			.star{
+				background: #d62769;
+			}
+			.star-f{
+				position: fixed;
+				margin-top: -200%;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+	<div class="star-f">
+					<div id="container1" >
+							This content requires HTML5/CSS3, WebGL, or Adobe Flash Player Version 9 or higher.
+					</div>
+		<!-- 			<div id="container2" >
+							This content requires HTML5/CSS3, WebGL, or Adobe Flash Player Version 9 or higher.
+					</div> -->
+					</div>
+		<audio id="aud">
+			<source src="images/lording.wav" type="audio/mpeg">
+		</audio>
+		<audio id="video">
+			<source src="images/video.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="all" loop="loop">
+			<source src="images/all.m4a" type="audio/mpeg">
+		</audio>
+		<!-- loading -->
+		<div class="page_bg loading_bg">
+			<div class="text_box">
+				<p class="p1"></p>
+				<p class="p2">&nbsp;</p>
+				<p class="p3">&nbsp;</p>
+				<p class="p4">&nbsp;</p>
+			</div>
+		</div>
+
+		<!-- loading end -->
+		<!--swiper start -->
+		<div class="swiper-container constructor">
+			<div class="swiper-wrapper posi">
+				<!--page1-->
+				<div class="swiper-slide">
+
+					<div class="page_bg page1_bg">
+						<img class="page1_title1" src="images/page1/title1.png" />
+						<img class="page1_title2" src="images/page1/title2.png" />
+						<div class="page1_btn_desc">
+							<img class="width100 open" src="images/page1/page1_rd.png" />
+							<img class="width100" src="images/page1/page1_desc.png" />
+						</div>
+						<img class="width100 page1_bottom" src="images/page1/bottom_slogan.png" />
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<div class="page_bg page2_bg">
+						<img class="width100" src="images/page2/page2_bg.gif" />
+						<div class="page2_font_gif gif1" data-name="page2_gif" data-size="16">
+							<img class="width100" src="" />
+						</div>
+						<img src="images/logo-55.png" class="lo-5">
+						<img class="width100 pagegif_bottom" src="images/bottom_slogan_other.png" />
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<div class="page_bg page2_bg">
+						<img class="width100" src="images/page3/page3_bg.jpg" />
+						<div class="page2_font_gif gif2" data-name="page3_gif" data-size="24">
+							<img class="width100" src="" />
+						</div>
+						<img src="images/logo-55.png" class="lo-5">
+						<img class="width100 pagegif_bottom" src="images/bottom_slogan_other.png" />
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<div class="page_bg page2_bg">
+						<img class="width100" src="images/page4/page4_bg.gif" />
+						<div class="page2_font_gif gif3" data-name="page4_gif" data-size="20">
+							<img class="width100" src="" />
+						</div>
+						<img src="images/logo-55.png" class="lo-5">
+						<img class="width100 pagegif_bottom" src="images/bottom_slogan_other.png" />
+						<img src="" class="lo">
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<div class="layer">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<img src="images/gotheme.png" class="theme">
+							<h2>出发前登记</h2>
+							<div class="msg">
+								<img src="images/border.png" class="top">
+								<input type="text" name="" class="name" placeholder="姓名">
+								<input type="number" name="" class="phone" placeholder="手机号">
+								<img src="images/border.png" class="bottom">
+								<img src="images/submit.png" class="submit-msg">
+							</div>
+						</div>
+					</div>
+					<div class="page_bg page2_bg">
+						<div class="choose">
+							<img class="width100" src="images/page5/bg.jpg" />
+							<img class="r" src="images/r.png">
+							<img class="b" src="images/b.png">
+						</div>
+						<div class="page2_font_gif gif4 alw" data-name="page5_gif" data-size="15">
+							<img class="width100" src="" />
+						</div>
+						<img src="images/logo-55.png" class="lo-5">
+						<img class="width100 pagegif_bottom" src="images/bottom_slogan_other.png" />
+						<!-- <img src="" class="lo"> -->
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<div class="la1">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<img src="images/gotheme.png" class="theme">
+							<h2>探索红蓝双星，寻找cs55线索获取星际大礼包</h2>
+							<div class="msg">
+								<img src="images/border.png" class="top">
+								<img src="images/tips.png" class="width100">
+								<img src="images/border.png" class="bottom">
+								<!-- <img src="images/submit.png" class="submit-msg"> -->
+							</div>
+						</div>
+					</div>
+					<div class="la2">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<div class="msg">
+								<img src="images/border.png" class="top">
+								<img src="images/gotheme.png" class="theme">
+								<h2>暂时没找到线索！</h2>
+								<p class="small">还有机会，再接再厉<br/>星级大礼包马上促手可及</p>
+								<img src="images/border.png" class="bottom">
+								<div class="btn">
+									<img src="images/and1.png" class="left">
+									<img src="images/xq.png" class="right">
+								</div>
+								<!-- <img src="images/submit.png" class="submit-msg"> -->
+							</div>
+						</div>
+					</div>
+					<div class="la3">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<div class="msg">
+								<h2 class="car-title">11111</h2>
+								<img class="pic" src="images/x1.png" class="width100" alt="">
+								<div class="btn">
+									<img src="images/and1.png" class="left">
+									<img src="images/xq.png" class="right">
+								</div>
+								<!-- <img src="images/submit.png" class="submit-msg"> -->
+							</div>
+						</div>
+					</div>
+					<div class="la4">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<div class="msg">
+								<img src="images/all.png" class="width100" alt="">
+								<div class="light">
+									<div class="wid-3">
+										<img src="images/1-1.png" class="filter" alt="" rel='0'>
+										<img src="images/2-1.png" class="filter" alt="" rel='1'>
+										<img src="images/3-1.png" class="filter" alt="" rel='2'>
+									</div>
+									<div class="wid-2">
+										<img src="images/4-1.png" class="filter" alt="" rel='3'>
+										<img src="images/5-1.png" class="filter" alt="" rel='4'>
+									</div>
+								</div>
+								<div class="btn">
+									<img src="images/and2.png" class="left go filter">
+									<img src="images/xq.png" class="right">
+								</div>
+								<!-- <img src="images/submit.png" class="submit-msg"> -->
+							</div>
+						</div>
+					</div>
+					<div class="la5">
+						<div class="box">
+							<img src="images/close.png" class="clo">
+							<div class="msg">
+								<img src="images/in.png" class="width100">
+							</div>
+						</div>
+					</div>
+					<!-- first start -->
+					<!-- <div id="container1" >
+							This content requires HTML5/CSS3, WebGL, or Adobe Flash Player Version 9 or higher.
+					</div> -->
+					<!-- second stars -->
+				<!-- 	<div id="container2" >
+							This content requires HTML5/CSS3, WebGL, or Adobe Flash Player Version 9 or higher.
+					</div> -->
+					<div class="cont-tab">
+						<div class="ser">我的线索</div>
+						<div class="star">切换星球</div>
+					</div>
+					<img class="width100" src="images/page5/bg.jpg" />
+					<div style="position: absolute;top: 0px;left: 0px;" class="test-click">
+						<div class="hot1 color-w">1</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide stop-swiping">
+					<img class="width100" src="images/page5/bg.jpg" />
+					<div class="video">
+						<img src="">
+					</div>
+				</div>
+				<div class="swiper-slide stop-swiping">
+					<img class="width100" src="images/last.jpg" />
+					<img src="images/luck.png" class="imgt">
+					<img src="images/back.png" class="imgb">
+					<div class="yus">
+						<div class="bor">
+							<img src="images/close.png" class="clo">
+							<img class="us width100" src="images/a-1.png" alt="">
+							<img class="width100 click" src="images/zj.png" alt="">
+						</div>
+					</div>
+					<div class="nus">
+						<div class="bor">
+							<img src="images/close.png" class="clo">
+							<img class="us width100" src="images/a-2.png" alt="">
+							<img class="width100 click" src="images/wzj.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--====================== js_start ======================-->
+			<script type="text/javascript" src="js/swiper-3.4.0.jquery.min.js"></script>
+			<!-- <script type="text/javascript" src="js/vconsole.min.js"></script> -->
+			<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+			<script type="text/javascript" src="http://192.168.254.108/1707_changan_cs55_stars/trunk/php/index.php/api"></script>
+			<noscript>
+			<p><b>Please enable Javascript!</b></p>
+			</noscript>
+			<script type="text/javascript" charset="utf-8">
+			// Vr Game red
+			// hide URL field on the iPhone/iPod touch
+			// function hideUrlBar_a() {
+				
+			// document.getElementsByTagName("body")[0].style.marginTop="1px";
+			// window.scrollTo(0, 1);
+			// }
+			// window.addEventListener("load", hideUrlBar_a);
+			// window.addEventListener("resize", hideUrlBar_a);
+			// window.addEventListener("orientationchange", hideUrlBar_a);
+
+
+			// create the panorama player with the container
+			// pano1=new pano2vrPlayer("container2");
+			// pano1.readConfigUrl("js/red_out.xml");
+			// hide the URL bar on the iPhone
+			// hideUrlBar_a();
+			// add gyroscope controller
+			// gyro1=new pano2vrGyro(pano1,"container2");
+			// Vr Game
+			function hideUrlBar() {
+			document.getElementsByTagName("body")[0].style.marginTop="1px";
+			window.scrollTo(0, 1);
+			}
+			window.addEventListener("load", hideUrlBar);
+			window.addEventListener("resize", hideUrlBar);
+			window.addEventListener("orientationchange", hideUrlBar);
+
+			// create the panorama player with the container
+			pano2=new pano2vrPlayer("container1");
+			pano2.readConfigUrl("blue_out.xml");
+			// hide the URL bar on the iPhone
+			hideUrlBar();
+			// add gyroscope controller
+			gyro2=new pano2vrGyro(pano2,"container1");
+
+			// 关闭最后弹窗
+			$('.bor .clo').click(function(){
+				$('.nus').fadeOut()
+				$('.yus').fadeOut()
+			})
+			// 开始播放
+			$('.open').click(function(){
+				swiper.slideNext();
+				document.getElementById('all').play()
+			})
+
+			// 准备完成时释放音频
+			$(document).ready(function() {
+					var audio = $('#aud');
+					var isPlaying = false;
+					function playAudio() {
+						var audio = $('#my');
+						if(audio.attr('src') == undefined) {
+							audio.attr('src', audio.data('src'));
+						}
+						console.log(audio)
+						document.getElementById('aud').play();
+						isPlaying = true;
+					}
+					$(function() {
+						playAudio();
+						document.addEventListener("WeixinJSBridgeReady", function() {
+							WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+								network = e.err_msg.split(":")[1];
+								playAudio();
+							});
+						}, false);
+					})
+				})	
+				window.onresize = function(){
+					// alert()
+					if ($(window).height() < 450) {
+						$('body').css('margin-top', '-50%')
+					} else {
+						$('body').css('margin-top', '0%')
+					}
+				}
+				function Controller(a, obCr) {
+					var _Cti = this;
+					_Cti.b = obCr;
+					// opening to the outside world
+					_Cti.init = function() {
+						vSwiper();
+					}
+					// internal access
+					vSwiper = function() {
+						window.swiper = new Swiper(_Cti.b.swiper, {
+							direction: 'vertical',
+							resistanceRatio: 0,
+							followFinger: false,
+							effect: 'fade',
+							noSwiping: _Cti.b.or,
+							noSwipingClass: 'stop-swiping',
+							height: $(window).height(),
+							onSlideChangeStart: function(swiper) {
+							},
+							onSlideChangeEnd: function(swiper) {
+								_Cti.chagImg()
+							}
+						});
+					}
+				}
+				Controller.prototype = {
+					chagImg: function() {
+						// stop()
+						var _Cti = this;
+						if(_Cti.b.loop) {
+							var frequency = 1
+							var art = setInterval(function() {
+								frequency++
+								if(parseInt($(_Cti.b.queue[swiper.activeIndex]).attr('data-size')) < frequency + 1) {
+									stop()
+								}
+								$(_Cti.b.queue[swiper.activeIndex]).children('img').attr('src', 'images/page' + (swiper.activeIndex + 1) + '/' + $(_Cti.b.queue[swiper.activeIndex]).attr('data-name') + '/1 (' + frequency + ').png')
+							}, _Cti.b.speed)
+							console.log(art)
+						} else {
+
+						}
+
+						function stop() {
+							clearInterval(art)
+							if(swiper.activeIndex == 3) {
+								setTimeout(function() {
+									$('.lo').fadeIn(300)
+									setTimeout(function() {
+										$('.lo').attr('src', 'images/lo.gif')
+									}, 50)
+								}, 100)
+								setTimeout(function() {
+									// swiper.slideNext();
+									setTimeout(function() {
+										always()
+									}, 1750)
+								}, 2500)
+								// always()
+
+							} else {
+								if(swiper.activeIndex < 4) {
+									setTimeout(function() {
+										// swiper.slideNext();
+									}, 300)
+								}
+
+							}
+
+						}
+					}
+				}
+				// 线索数组
+				var clName = ['x1', 'x2', 'x3', 'x4', 'x5'];
+				// 点击线索弹出详情
+				$('.la4 .light div img').click(function() {
+					$('.la3 h2').html(clName[parseInt($(this).attr('rel'))])
+					$('.la3 .btn').hide()
+					$('.la3 .pic').attr('src', 'images/x' + (parseInt($(this).attr('rel')) + 1) + '.png')
+					setTimeout(function(){
+					$('.la3').css('margin-top','0%')
+					},300)
+				})
+				setInterval(function() {
+					// $('.r,.b').fadeToggle(1800)
+				}, 700)
+				// 关闭出发前留资
+				$('.clo').click(function() {
+					$('.layer').css('margin-top', '-200%')
+					$('.la1').css('margin-top', '-200%')
+					$('.la2').css('margin-top', '-200%')
+				})
+				// 红蓝双星弹窗
+				$('.choose .r').click(function() {
+					$('.layer').css('margin-top', '00%')
+					$('#container1').css('margin-left','-100%')
+					$('#container2').css('margin-left','0px')
+				});
+				$('.choose .b').click(function() {
+					$('.layer').css('margin-top', '00%')
+					$('#container2').css('margin-left','-100%')
+					$('#container1').css('margin-left','0px')
+				});
+				// 切换星球
+				$('.star').click(function(){
+				if ($('#container2').css('margin-left').substr(0,1) == '-') {
+						$('#container1').css('margin-left','-100%')
+						$('#container2').css('margin-left','0px')
+					} else {
+						$('#container2').css('margin-left','-100%')
+						$('#container1').css('margin-left','0px')
+					}		
+				});
+				// 打开收集到的线索
+				$('.ser').click(function(){
+					$('.la4').css('margin-top','0px')
+					$('.la4').show()
+				})
+				// 关闭VR游戏提示
+				$('.la5 .clo').click(function(){
+					$('.la5').css('margin-top','200%')
+				})
+				//关闭详情弹窗
+				$('.la3 .clo').click(function() {
+					$('.la3').css('margin-top','-200%')
+				})
+				// 合成碎片页关闭
+				$('.la4 .clo').click(function() {
+					$('.la4').css('margin-top', '200%')
+				})
+				// 模拟视频
+				function video() {
+					frequency = 1
+					var video = setInterval(function() {
+						frequency++
+						if(72 < frequency + 1) {
+							stopVideo()
+						}
+						$('.video').children('img').attr('src', 'images/video/1 (' + frequency + ').jpg')
+					}, 140)
+					function stopVideo() {
+						document.getElementById('video').pause();
+						clearInterval(video)
+						swiper.slideNext();
+
+					}
+				}
+				// 抽奖
+				$('.imgt').click(function(){
+					$.ajax({
+						type: "GET",
+						url: "" + location.origin + "/1707_changan_cs55_stars/trunk/php/index.php/api/doraffle",
+						dataType: "jsonp",
+						success: function(data) {
+						// alert(1)
+						console.log(data)
+						switch(data.data.id)
+						{
+							case -1:
+								// alert('您已经抽过')
+								$('.nus').fadeIn()
+							break;
+							case 0:
+
+							break;
+						}
+						}
+					});
+					// imgLuck();
+				})
+				function imgLuck(){
+					$.ajax({
+						type: "GET",
+						url: "" + location.origin + "/1707_changan_cs55_stars/trunk/php/index.php/api/doraffle",
+						dataType: "html",
+						success: function(data) {
+						alert(1)
+							console.log(data.data)
+						}
+					});
+				}
+				// 单独循环某一个
+				function always() {
+					var frequency = 1
+					var art = setInterval(function() {
+						frequency++
+						if($('.alw').attr('data-size') < frequency + 1) {
+							frequency = 1
+						}
+						$('.alw').children('img').attr('src', 'images/page5/page5_gif/1 (' + frequency + ').png')
+					}, 80)
+				}
+				// 留资提交切换下一屏
+				$('.submit-msg').click(function() {
+					$.ajax({
+						type: "GET",
+						url: "" + location.origin + "/1707_changan_cs55_stars/trunk/php/index.php/api/login_fans/" + $('.name').val() + "/" + $('.phone').val() + "/2",
+						dataType: "json",
+						success: function(data) {
+							if(data.msg == 'ok') {
+								$('.layer').css('margin-top', '200%')
+								setTimeout(function() {
+									swiper.slideNext();
+								}, 600)
+							} else {
+								alert(data.msg)
+							}
+						}
+					});
+				})
+				// 点击产生线索
+				$('.test-click div').click(function() {
+					clue()
+				})
+				// input上移
+				$("input").focus(function() {
+					if (/Android/.test(navigator.userAgent)) {
+						// $('body').css('margin-top', '-50%')
+					} 
+				});
+				// input下滑
+				$("input").blur(function() {
+					if (/Android/.test(navigator.userAgent)) {
+						// $('body').css('margin-top', '0%')
+					} 
+					
+				})
+				// 线索触发
+				function clue() {
+					$.ajax({
+						type: "GET",
+						url: "" + location.origin + "/1707_changan_cs55_stars/trunk/php/index.php/api/getpiece",
+						dataType: "json",
+						success: function(data) {
+							$('.la3 .pic').attr('src', 'images/x' + data.data.key + '.png');
+							$('.la3 .car-title').html('恭喜！获得线索');
+							$('.la3 .btn').show();
+								setTimeout(function(){
+									$('.la3').css('margin-top','0px')
+								},300)
+						}
+					});
+				}
+				// 线索列表触发
+				function allClue() {
+					$.ajax({
+						type: "GET",
+						url: "" + location.origin + "/1707_changan_cs55_stars/trunk/php/index.php/api/mypieceslist",
+						dataType: "json",
+						success: function(data) {
+							console.log(data.data)
+						}
+					});
+				}
+				// 进入视频
+				$('.la4 .go').click(function() {
+					swiper.slideNext();
+					// document.getElementById('video').play()
+					video();
+					document.getElementById('video').play()
+					document.getElementById('all').pause()
+
+				})
+				// 监听绘制canvas
+			</script>
+			<script type="text/javascript" charset="utf-8">
+				var i = 0;
+				var showString = '2017年7月，中国FAST天文望远镜捕获到一段奇怪电波科学家通过分析怀疑是来自天英座附近两颗红蓝双星';
+				$(function() {
+					marquee();
+				});
+
+				function marquee() {
+					var stringLength = showString.length
+					var char = showString.charAt(i);
+					var newstr = $(".text_box").html() + char;
+					if(i <= 18) $(".text_box .p1").html($(".text_box .p1").html() + char);
+					if(i > 18 && i <= 27) $(".text_box .p2").html($(".text_box .p2").html() + char);
+					if(i > 27 && i <= 34) $(".text_box .p3").html($(".text_box .p3").html() + char);
+					if(i > 34 && i <= 51) $(".text_box .p4").html($(".text_box .p4").html() + char);
+					i++;
+					var timeID = setTimeout("marquee()", 70);
+					if(i >= stringLength + 10) {
+						// init
+						var ar = new Controller(1, {
+							loop: true,
+							queue: ['.gif1', '.gif1', '.gif2', '.gif3', '.gif4'],
+							swiper: '.constructor',
+							speed: 50,
+							or: true
+						});
+						ar.init()
+						clearTimeout(timeID);
+						$(".text_box").html('<p class="p1">@%#@……￥……@……￥@# </p><p class="p2">注意：信息屏蔽封锁开启</p>');
+						setTimeout(function() { $('.loading_bg').fadeOut(); }, 1000);
+					}
+				}
+			</script>
+	</body>
+
+</html>

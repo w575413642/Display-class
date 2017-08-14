@@ -1,0 +1,13 @@
+$.ajax({
+   type : "get",
+   cache:false,
+   url : "index.php?c=api&m=testdrive_adddrive",
+   dataType : "jsonp",
+   data:{"uname":"ÕÅÈý","phone":"15169014456","sex":"ÄÐ"},
+   success : function(jsondata){
+      	console.log(jsondata);
+   },
+   error:function(){
+      	alert("fail");
+   }
+});

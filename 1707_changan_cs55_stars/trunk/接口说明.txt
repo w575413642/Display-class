@@ -1,0 +1,19 @@
+1.留资接口 	GET 域名/php/index.php/api/login_fans/张三/15169014456/2 参数说明：姓名/电话/来源uid
+返回：{code:200,data:{},msg:'ok'}
+
+2.收集线索接口	GET 域名/php/index.php/api/getpiece			
+返回：	有线索 {code:200,msg=>'ok',data:{id:1,key:1,name:'外观'}} 
+	无线索{code:200,msg=>'ok',data:{id:0,key:'',name:'piece not found'}}
+
+3.我的线索列表	GET 域名/php/index.php/api/mypieceslist			
+返回： {code:200,msg=>'ok',data:[{"id":"1","cookie":"","journey_id":"3","key_num":"1","create_time":"2017-07-15 19:55:57"},{}]} 
+注 ：key_num 为线索对应的标识
+
+
+4.分享获得线索	GET 域名/php/index.php/api/share
+返回：	获得碎片 	{code:200,msg=>'ok',data:0}
+	已经获得过了	{code:200,msg=>'ok',data:1} 视为普通分享，不弹出线索弹层
+
+5.抽奖接口	GET 域名/php/index.php/api/doraffle
+返回：	中奖 {code:200,msg=>'ok',data:{id:1,key:1,name:'外观'}}
+	未中奖 {code:200,msg=>'ok',data:{id:0,key:'',name:'ops not winning'}}

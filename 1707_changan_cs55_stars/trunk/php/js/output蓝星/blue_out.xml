@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="" hideabout="1">
+  <view fovmode="0" pannorth="0">
+    <start pan="0" fov="60" tilt="0"/>
+    <min pan="-180" fov="5" tilt="-50"/>
+    <max pan="180" fov="120" tilt="50"/>
+  </view>
+  <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+  <hotspots width="180" height="20" wordwrap="1">
+    <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+    <polystyle mode="1" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    <polyhotspot title="" target="_self" url="javascript:alert(1);" id="Poly01">
+      <vertex pan="87.6024" tilt="-28.4305"/>
+      <vertex pan="87.316" tilt="-33.295"/>
+      <vertex pan="72.3299" tilt="-33.6891"/>
+      <vertex pan="73.03360000000001" tilt="-28.7118"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(2);" id="Poly02">
+      <vertex pan="146.099" tilt="-40.8344"/>
+      <vertex pan="145.533" tilt="-44.3753"/>
+      <vertex pan="135.139" tilt="-42.7426"/>
+      <vertex pan="136.023" tilt="-39.3406"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(3);" id="Poly03">
+      <vertex pan="-18.8809" tilt="-33.0166"/>
+      <vertex pan="-16.4789" tilt="-36.9346"/>
+      <vertex pan="-37.7083" tilt="-37.3786"/>
+      <vertex pan="-39.3958" tilt="-33.0962"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(4);" id="Poly04">
+      <vertex pan="154.413" tilt="36.2994"/>
+      <vertex pan="154.817" tilt="30.5452"/>
+      <vertex pan="142.679" tilt="29.7044"/>
+      <vertex pan="142.106" tilt="35.5892"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(5);" id="Poly05">
+      <vertex pan="90.9992" tilt="35.4448"/>
+      <vertex pan="91.218" tilt="28.9048"/>
+      <vertex pan="79.7675" tilt="28.0708"/>
+      <vertex pan="79.13509999999999" tilt="35.1338"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(6);" id="Poly06">
+      <vertex pan="-162.757" tilt="33.0224"/>
+      <vertex pan="-171.225" tilt="33.7256"/>
+      <vertex pan="-170.399" tilt="26.0822"/>
+      <vertex pan="-161.73" tilt="25.979"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(7);" id="Poly07">
+      <vertex pan="-104.083" tilt="22.0558"/>
+      <vertex pan="-104.267" tilt="14.3487"/>
+      <vertex pan="-120.102" tilt="16.6401"/>
+      <vertex pan="-119.01" tilt="24.6166"/>
+    </polyhotspot>
+    <polyhotspot title="" target="_self" url="javascript:alert(8);" id="Poly08">
+      <vertex pan="-2.41794" tilt="51.8905"/>
+      <vertex pan="-1.76167" tilt="46.0848"/>
+      <vertex pan="-22.3033" tilt="46.0735"/>
+      <vertex pan="-23.7769" tilt="52.0288"/>
+    </polyhotspot>
+  </hotspots>
+  <media/>
+  <input tile0url="images/blue_o_0.jpg" tile5url="images/blue_o_5.jpg" tilesize="1334" tile4url="images/blue_o_4.jpg" tile3url="images/blue_o_3.jpg" tilescale="1.007496251874063" tile2url="images/blue_o_2.jpg" tile1url="images/blue_o_1.jpg"/>
+  <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+</panorama>

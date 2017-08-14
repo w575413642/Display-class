@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*全局*/
+*{padding:0;margin:0;font-family: Arial,"微软雅黑";outline:none}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family: Arial,"微软雅黑";font-size:12px;background:#fff;color:#fff;}
+/*html{overflow-y:scroll;}*/
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none; }
+a:hover,a:active{text-decoration:none; } 
+
+ .clearfix:after {
+     display: block;
+     height: 0;
+     content: "";
+     clear: both;
+     overflow: hidden;
+ }
+ 
+ .fl {
+     float: left;
+ }
+ 
+ .fr {
+     float: right;
+ } 
+.animated{
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.sharepic{
+	display: none;
+}
+.loading{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 9999;
+    background: url('../images/loading.gif') no-repeat 50%;
+}
+
+.loadings{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 99999;
+    background: #000 url('../images/loading_bg.jpg') no-repeat 100% 100%;
+    background-size: 100% 100%;
+}
+
+.loading-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    z-index: 20;
+}
+.loading-num{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    padding-right: 45px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 50px;
+    font-family: "黑体";
+    color: #FFF;
+    background: url('../images/precent.png') no-repeat right bottom;
+    z-index: 50;
+}
+.eq-loading{
+    display: none;
+}
+.bottom-bg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    z-index: 20;
+}
+.loading-car{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    z-index: 60;
+}
+
+.loading-car img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+}
+
+.d-page{
+	width:100%;
+	height:100%;
+}
+/*---------以上。全局---------*/ 
+ /*---------向下滚动---------*/
+@-webkit-keyframes scroll {
+  from {margin-bottom: 5px;opacity:1} 
+   70%{margin-bottom: 2px;opacity:0}
+   100%{margin-bottom: 2px;opacity:0}
+}
+
+@keyframes scroll {
+	from {margin-bottom: 5px;opacity:1} 
+   70%{margin-bottom: 2px;opacity:0}
+   100%{margin-bottom: 2px;opacity:0}
+} 
+.d-scrollDown{
+    position: absolute;
+    /*top: 80.1%;*/
+    width: 1.56%;
+    left: 49.22%;
+    bottom: 5px; 
+    -webkit-animation: scroll 2s ease-out infinite; 
+	animation: scroll 2s ease-out infinite; 
+}
+.d-scrollDown img{
+    width:100%;
+}
+
+ /*---------------------------屏幕小于1200px---------------------------*/
+@media screen and (max-width: 1200px){ 
+}

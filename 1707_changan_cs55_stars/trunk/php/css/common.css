@@ -1,0 +1,41 @@
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 12px;
+	line-height: 1;
+	background: #eaeaea;
+	color: #333333;
+	position: fixed;
+}
+*{font-family: "黑体"}
+.abso{
+	position: absolute;
+}
+.rela{
+	position: relative;
+}
+.fixed{
+	width: 100%;
+	position: fixed;
+	z-index: 30;
+}
+.top0{
+	top: 0;
+}
+.bottom0{
+	bottom: 0;
+}
+.left0{
+	left: 0;
+}
+.right0{
+	right: 0;
+}
+.pupup{
+	display: none;
+}
+.pupup .close{
+	display: block;
+	width: 36px;
+	padding:0 0 4% 4%;
+}

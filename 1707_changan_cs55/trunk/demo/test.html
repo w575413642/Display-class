@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>直播测试</title>
+		<meta name="keywords" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<meta name="description" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<meta name="content" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<link rel="stylesheet" href="swiper.min.css">
+		<style>
+			*{padding:0px;margin:0px;}
+			.liveitem{margin-bottom: 11%;position: relative;width:100%;height:26.3%;background-image: url('1.jpg');background-position: center;background-size: 100% 100%;}
+			.liveitem .title{    width: 30%;
+    background-color: rgba(0,0,0,0.3);
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 2px 0;
+    position: absolute;
+    left: 35%;
+    top: 42%;}
+			
+			.video-box{display:block;position: fixed;top:0px;left: 0px;bottom: 0px;width:100%;height: 100%;background-color: rgba(0,0,0,0.6);display: none;}
+			.video-box-wrapper{padding:0px;overflow: hidden;/* background-image: url('1.jpg');background-size: 100% 100%; */margin-top:50%;}
+			.detail{
+			    position: absolute;
+			    bottom: -22.6%;
+			    width: 99.5%;
+			    height: 22%;
+			    border-left: 1px solid #c6c6c6;
+			    border-right: 1px solid #c6c6c6;
+			    /*border-bottom: 1px solid #c6c6c6;*/
+			}
+			.detail p{
+			font-size: 12px;
+			line-height: 10px;
+			padding-top: 5px;
+			padding-left: .7em;
+			}
+			.detail b{
+				font-weight: normal;
+			}
+			.color{
+				color: orange;
+			}
+
+			html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+    }
+@media screen and (max-width: 414px) {
+    	.detail p {
+        font-size: 14px;
+    line-height: 15px;
+    padding-top: 5px;
+    padding-left: .7em;
+}
+    }
+
+@media screen and (max-width: 378px) {
+    	.detail p {
+        font-size: 13px;
+    line-height: 13px;
+    padding-top: 5px;
+    padding-left: .7em;
+}
+    }
+
+@media screen and (max-width: 325px) {
+    	.detail p {
+font-size: 12px;
+    line-height: 11px;
+    padding-top: 5px;
+    padding-left: .7em;
+}
+    }
+
+		</style>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<!--监测代码-->
+	<body style="-webkit-tap-highlight-color: transparent;position:relative"  id="constructor">
+	
+<div class="liveitem item1" data-room="131420">
+				<!-- <img src="1.jpg" style="top:0px" /> -->
+				<p class="title">主播1</p>
+				<div class="detail">
+					<p>主播：<b>DJ波仔</b></p>
+					<p>共 <b class="color">2290</b> 人正在观看</p>
+				</div>
+			</div>
+			<div class="liveitem item2"  data-room="515917">
+				<!-- <img src="1.jpg" style="top:33.3%" /> -->
+				<p class="title">主播2</p>
+						<div class="detail">
+					<p>主播：<b>DJ波仔</b></p>
+					<p>共 <b class="color">2290</b> 人正在观看</p>
+				</div>
+			</div>
+			<div class="liveitem item3"  data-room="515917">
+				<!-- <img src="1.jpg" style="top:66.6%"/> -->
+				<p class="title">主播3</p>
+						<div class="detail">
+					<p>主播：<b>DJ波仔</b></p>
+					<p>共 <b class="color">2290</b> 人正在观看</p>
+				</div>
+			</div>				
+	<!-- 播放弹窗 -->
+	<div class="video-box">
+		
+	</div>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+
+				$("body").height($(window).height());
+				var vheight = $(window).width()/1.4231499051233396;
+				
+				$(".liveitem").click(function(){
+					var roomid = $(this).attr("data-room");
+					var videohtml = '<div class="video-box-wrapper" id="video-box-wrapper" style="height:auto;">'+
+										'<iframe name="videoframe" id="video-frame" style="width:100%;position:absolute;top:50%;left:0px;bottom:0px;" src="https://m.douyu.com/bizroom/'+roomid+'?hide=1"></iframe>'+	
+									'</div>';
+					videohtml = '<div class="video-box-wrapper" id="video-box-wrapper" style="height:auto;">'+
+            '<video id="dy-video-player"  style="width:100%;height:100%" class="video-js" type="application/x-mpegURL" webkit-playsinline="" preload="auto" autoplay="autoplay" src="http://hlsa.douyucdn.cn/live/131420rE3sTnyvvb_900/playlist.m3u8?wsSecret=4c048ebe95aeff3f6eb63772a2a2bd2a&wsTime=1500104925&did=&ver=">'+
+    '<p>您的浏览器不支持 video 标签</p>'+
+'</video></div>';
+					$(".video-box").html(videohtml);
+					//$("#video-frame").css({"height":vheight,"margin-top":(-1*vheight/2)+"px"});
+					$(".video-box-wrapper").css({"height":vheight,"margin-top":($(window).height()/2-(vheight/2))+"px"});
+					$(".video-box").fadeIn();
+					// $("#video-frame").click();
+					document.getElementById('dy-video-player').play()
+				});
+				$(".video-box").click(function(){
+					$(".video-box").html("");
+					$(".video-box").hide();
+					// $("#video-frame").css({"display":"none"});
+				});
+
+
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        direction: 'vertical'
+    });
+
+			});
+
+		</script>
+		</div>
+	</body>
+
+</html>

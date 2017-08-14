@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>直播测试</title>
+		<meta name="keywords" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<meta name="description" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<meta name="content" content="长安悦翔V7年中让利回馈火热进行中，官方直降8000元！还等什么？！快来抢购!" />
+		<style>
+			*{padding:0px;margin:0px;}
+			.liveitem{width:100%;height:33.3%;position: absolute;background-image: url('1.jpg');background-position: center;background-size: 100% 100%;}
+			.liveitem p{    width: 30%;
+    background-color: rgba(0,0,0,0.3);
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 26%;
+    border: 1px solid #fff;
+    padding: 2px 0;}
+			.item1{top:0px;}
+			.item2{top:33.3%;}
+			.item3{top:66.6%;}
+			.video-box{display:block;position: fixed;top:0px;left: 0px;bottom: 0px;width:100%;height: 100%;background-color: rgba(0,0,0,0.6);display: none;}
+			.video-box-wrapper{padding:0px;overflow: hidden;/* background-image: url('1.jpg');background-size: 100% 100%; */margin-top:50%;}
+			/* iframe{opacity: 0;} */
+		</style>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<!--监测代码-->
+	<body style="-webkit-tap-highlight-color: transparent;position:relative"  id="constructor">
+	<div class="liveitem item1" data-room="2143492">
+		<!-- <img src="1.jpg" style="top:0px" /> -->
+		<p>主播1</p>
+	</div>
+	<div class="liveitem item2"  data-room="515917">
+		<!-- <img src="1.jpg" style="top:33.3%" /> -->
+		<p>主播2</p>
+	</div>
+	<div class="liveitem item3"  data-room="515917">
+		<!-- <img src="1.jpg" style="top:66.6%"/> -->
+		<p>主播3</p>
+	</div>
+	<iframe id="test1" src="index_m.html"></iframe>
+	<!-- 播放弹窗 -->
+	<div class="video-box">
+		
+	</div>
+		<script type="text/javascript">
+			$(function() {
+				$("body").height($(window).height());
+				var vheight = $(window).width()/1.4231499051233396;
+				
+				$("#test1").load(function () {
+					console.log($("#test1"))
+				})
+				$(".liveitem").click(function(){
+					var roomid = $(this).attr("data-room");
+					var videohtml = '<div class="video-box-wrapper" id="video-box-wrapper" style="height:auto;">'+
+										'<iframe name="videoframe" id="video-frame" style="width:100%;position:absolute;top:50%;left:0px;bottom:0px;" src="https://m.douyu.com/bizroom/'+roomid+'?hide=1"></iframe>'+	
+									'</div>';
+// 					videohtml = '<div class="video-box-wrapper" id="video-box-wrapper" style="height:auto;">'+
+//             '<video id="dy-video-player"  style="width:100%;height:100%" class="video-js" type="application/x-mpegURL" webkit-playsinline="" preload="auto" autoplay="autoplay" src="http://hls3a.douyucdn.cn/live/515917rtoEDif9yN_900/playlist.m3u8?wsSecret=668d2d62b3581d1c55e2dd5d4bcc44c9&amp;wsTime=1499756325&amp;did=&amp;ver=">'+
+//     '<p>您的浏览器不支持 video 标签</p>'+
+// '</video></div>';
+					$(".video-box").html(videohtml);
+					//$("#video-frame").css({"height":vheight,"margin-top":(-1*vheight/2)+"px"});
+					$(".video-box-wrapper").css({"height":vheight,"margin-top":($(window).height()/2-(vheight/2))+"px"});
+					$(".video-box").fadeIn();
+					// $("#video-frame").click();
+					$("#video-frame").load(function () {
+						console.log($("#video-frame"))
+					})
+					document.getElementById('dy-video-player').play()
+				});
+				$(".video-box").click(function(){
+					$(".video-box").html("");
+					$(".video-box").hide();
+					// $("#video-frame").css({"display":"none"});
+				});
+			});
+
+		</script>
+		</div>
+	</body>
+
+</html>

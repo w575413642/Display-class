@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>说乡音，赞马6，赢大奖</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="说乡音，赞马6，赢大奖">
+    <meta name="description" content="一汽马自达 说乡音，赞马6，赢大奖活动">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/welcome.css?v20150824">
+</head>
+
+<body>
+    <div style="display:none"><img src="bg.jpg" width="640" height="1006" alt="说乡音，赞马6，赢大奖"></div>
+    <div class="cti-welcome-layer" bas>
+        <img class="cti-welcome-bg" src="images/common/welcome.jpg" alt="说乡音，赞马6，赢大奖">
+        <img class="cti-welcome-exm" style="display:none;" src="images/common/erweima.jpg" alt="说乡音，赞马6，赢大奖">
+    </div>
+    <script type="text/javascript">
+    if (/microme/.test(navigator.userAgent.toLocaleLowerCase())) {
+        window.location.href = "/";
+    }
+    </script>
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+    $("<img>").on("load error", function() {
+        console.log("img ladding");
+        resize();
+    }).attr("src", "images/common/welcome.jpg");
+
+    function resize() {
+        console.log("resize");
+        $(".cti-welcome-exm").css({
+            "top": $(".cti-welcome-bg").height() * 0.738,
+            "display": "block"
+        });
+    }
+    $(window).resize(function(event) {
+        /* Act on the event */
+        resize();
+    });
+    </script>
+</body>
+
+</html>

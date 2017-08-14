@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CS55上市直播看这里</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="description" itemprop="description" content="精彩内容全呈现，官网直播、斗鱼人气主播同步放送！">
+	<meta name="content" itemprop="image" content="精彩内容全呈现，官网直播、斗鱼人气主播同步放送！">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="h5/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="h5/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="h5/css/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="h5/css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="h5/css/index.css">
+	<style>
+		.price-wrap{
+			font-size: 18px;
+		}
+		.price-wrap div{
+			width: 48%;
+		}
+		.price-wrap div.textr{
+			text-align: right;
+		}
+		.price-wrap div.textl{
+			text-align: left;
+		}
+	</style>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script src="php/index.php?c=api&m=jssdk"></script>
+	<script src="h5/js/jquery-1.10.2.min.js"></script>
+	<script src="h5/js/swiper-3.4.2.min.js"></script>
+	<script src="h5/js/jquery.spritespin.min.js"></script>
+	<script type="text/javascript" src="h5/js/jquery.touchSwipe.min.js"></script> 
+	<script type="text/javascript" src="h5/js/touch.js"></script>
+	<script type="text/javascript" src="h5/js/jquery.downCount.js"></script>
+	<script type="text/javascript" src="h5/js/jquery.nanoscroller.js"></script>
+	<!-- <script type="text/javascript" src="h5/js/vconsole.min.js"></script> -->
+	<script src="h5/js/tour.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?dceaeaefe1a97d13039d223d36b3e1ca";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body class="img100" style="position: fixed;top: 0px;left: 0px;">
+	<div class="load-container abso hide">
+		<div class="load-wrap">
+			<div class="num">0%</div>
+			<div class="line rela">
+				<div class="abso blueLine"></div>		
+			</div>
+			<div class="text">请使用横屏观看</div>
+		</div>
+	</div>
+	<div class="rotate-container abso">
+		<div class="rotate-wrap">
+			<img src="h5/images/rotate_device.png">
+			<div class="text">请使用横屏观看</div>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		//微信分享
+		wx.ready(function() {
+			wx.onMenuShareAppMessage({
+				title: $('title').text(),
+				desc: $('[name="description"]').attr('content'),
+				link: 'http://e.changan.com.cn/CS552017_4/',
+				// link: 'http://www.changan.com.cn/alsvin-v7/sell/',
+				imgUrl: getRootPath_web() + 'h5/images/share.jpg?v=1',
+				trigger: function(res) {
+					// alert('用户点击发送给朋友')
+				},
+				success: function(res) {
+					// alert('已分享')
+					// alert(getRootPath_web() + 'h5/images/share.jpg?v=1.1');
+				},
+				cancel: function(res) {
+					// alert('已取消')
+				},
+				fail: function(res) {
+					// alert(JSON.stringify(res));
+				}
+			})
+			// 朋友圈
+			wx.onMenuShareTimeline({
+				title: $('title').text(),
+				desc: $('[name="description"]').attr('content'),
+				link: 'http://e.changan.com.cn/CS552017_4/',
+				// link: 'http://www.changan.com.cn/linmax/sell',
+				imgUrl: getRootPath_web() + 'h5/images/share.jpg?v=1',
+				trigger: function(res) {
+					// alert('用户点击发送给朋友')
+				},
+				success: function(res) {
+					// alert('已分享')
+				},
+				cancel: function(res) {
+					// alert('已取消')
+				},
+				fail: function(res) {
+					// alert(JSON.stringify(res));
+				}
+			})
+		})
+
+		function getRootPath_web() {
+			//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+			var curWwwPath = window.document.location.href;
+			//获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
+			var pathName = window.document.location.pathname;
+			var pos = curWwwPath.indexOf(pathName);
+			//获取主机地址，如： http://localhost:8083
+			var localhostPaht = curWwwPath.substring(0, pos);
+			//获取带"/"的项目名，如：/uimcardprj
+			var projectName = pathName.substring(0, pathName.lastIndexOf('/') + 1);
+			return(localhostPaht + projectName);
+		}
+	</script>
+	<script type="text/javascript">
+		var vw = $(window).width();
+		var vh = $(window).height();
+		function preload(){
+			if (vw<vh) {
+				$(".load-container").css({
+					"width":vh,
+					"height": vw,
+					"marginTop":(vh-vw)/2,
+					"marginLeft":(vw-vh)/2
+				}).addClass('rotate90')
+			}else{
+				$(".load-container").css({
+					"width":vw,
+					"height": vh,
+					"marginTop":0,
+					"marginLeft":0
+				}).removeClass('rotate90')
+			}
+			var imgList = [
+				"h5/images/page1.jpg",
+				"h5/images/text-index2.png",
+				"h5/images/page1-2.jpg",
+				"h5/images/page3.jpg",
+				"h5/images/page4.jpg",
+				"h5/images/page5.jpg",
+				"h5/images/douyu-title.png",
+				"h5/images/live-poster.jpg",
+				"h5/images/live-changeMan.png",
+				"h5/images/live-changeWo.png",
+				"h5/images/page6.jpg",
+				"h5/images/page8.jpg",
+				"h5/images/text-comfort.png",
+				"h5/images/more.png",
+				"h5/images/page9.jpg",
+				"h5/images/text-safe.png",
+				"h5/images/more.png",
+				"h5/images/page10.jpg",
+				"h5/images/text-power.png",
+				"h5/images/more.png",
+				"h5/images/page11.jpg",
+				"h5/images/media1.jpg",
+				"h5/images/media1.jpg",
+				"h5/images/media1.jpg",
+				"h5/images/media1.jpg",
+				"h5/images/prev.png",
+				"h5/images/next.png",
+				"h5/images/page12.jpg",
+				"h5/images/top.png",
+				"h5/images/icon1.png",
+				"h5/images/icon2.png",
+				"h5/images/icon3.png",
+				"h5/images/icon4.png",
+				"h5/images/icon5.png",
+				"h5/images/icon6.png",
+				"h5/images/icon7.png",
+				"h5/images/icon8.png",
+				"h5/images/icon9.png",
+				"h5/images/down.png",
+				"h5/images/text-neishi.png?v=1",
+				"h5/images/more.png",
+				"h5/images/text-neishi1.png",
+				"h5/images/more1.png",
+				"h5/images/text-360.png",
+				"h5/images/more.png",
+				"h5/images/text-360-1.png",
+				"h5/images/more1.png"
+			]
+			var ss=0;
+			// function aaa () {
+			// 	if (ss==imgList.length) {
+			// 		$(".load-container").fadeOut()
+			// 		$(".page1 .text-index1").show()
+			// 		return;
+			// 	}else{
+			// 		var img = new Image();
+			// 		img.src = imgList[ss];
+			// 		img.onload = function () {
+			// 			ss++;
+			// 			var progress = parseInt(ss/imgList.length*100);
+			// 			$(".load-wrap .num").html(progress+"%")
+			// 			$(".load-wrap .blueLine").width(progress+"%")
+			// 			aaa()
+			// 		}
+			// 	}
+			// }
+			// aaa()
+			var num = 0;
+			var testInter = setInterval(function () {
+				num++
+				// var progress = parseInt(/100);
+				if (num <= 100) {
+					$(".load-wrap .num").html(num+"%")
+					$(".load-wrap .blueLine").width(num+"%")
+				}else{
+					$(".load-container").fadeOut()
+					$(".page1 .text-index1").show()
+					clearInterval(testInter)
+				}
+			},60)
+			// $(window).load(function () {
+			// })
+		}
+		preload();
+	</script>
+	<div class="box">
+		<div id="swiper-page-box" class="fl">
+			<div class="swiper-container swiper-page fl" >
+				<div class="swiper-wrapper">
+					<!-- 首页 -->
+					<div class="swiper-slide swiper-no-swiping  page1" navIndex="0">
+						<img class="bgImg-center" src="h5/images/page1.jpg">
+						<div class="page-text-wrap abso">
+							<img class="text-index1 animated2  bounceRightBottom" src="h5/images/text-index1.png">
+							<img class="text-index1 animated3 bounceRightBottom" src="h5/images/text-index1-2.png">
+							<img class="text-index1 animated4  bounceRightBottom" src="h5/images/text-index1-3.png">
+							<img class="text-index1 animated5  bounceRightBottom" src="h5/images/text-index1-4.png">
+							<img class="text-index1 animated6  bounceRightBottom" src="h5/images/text-index1-5.png">
+							<img class="text-index1 animated7  bounceRightBottom" src="h5/images/text-index1-6.png">
+						</div>
+					</div>
+					<div class="swiper-slide swiper-no-swiping  page2" navIndex="0">
+						<img class="abso page1-2 animated fadeInUp" src="h5/images/text-index2.png">
+						<img class="bgImg-center" src="h5/images/page1-2.jpg">
+					</div>
+					<!-- 价格 -->
+					<div class="swiper-slide swiper-no-swiping  page3" navIndex="1">
+						<img class="bgImg-center" src="h5/images/page3.jpg">
+						<div class="price-wrap abso animated fadeInUp">
+							<div class="fl textr">
+								<p>1.5T 6MT 炫目型&nbsp;&nbsp;&nbsp;83,900元</p>
+								<p>1.5T 6MT 炫色型&nbsp;&nbsp;&nbsp;89,900元</p>
+								<p>1.5T 6MT 炫动型&nbsp;&nbsp;&nbsp;99,900元</p>
+								<p>1.5T 6MT 炫酷型&nbsp;109,900元</p>
+							</div>
+							<div class="fr textl">
+								<p>1.5T 6AT 炫彩型&nbsp;&nbsp;&nbsp;98,900元</p>
+								<p>1.5T 6AT 炫色型&nbsp;102,900元</p>
+								<p>1.5T 6AT 炫动型&nbsp;113,900元</p>
+								<p>1.5T 6AT 炫耀型&nbsp;132,900元</p>
+							</div>
+						</div>
+					</div>
+					<!-- 官网直播 -->
+					<div class="swiper-slide swiper-no-swiping  page4" navIndex="2">
+						<img class="bgImg-center" src="h5/images/page4.jpg">
+						<div class="guan-container abso">
+							<div class="guan-title noSwipe rela">
+								<img src="h5/images/guanwang-title.png">
+								<div class="guanzhu abso">
+									<img class="guanzhu-btn" src="h5/images/guanzhu-btn.png">
+									<img class="qrcode abso" src="h5/images/qrcode.png">
+								</div>
+							</div>
+							<div class="guan-wrap rela clearfix">
+								<div class="live_player fl">
+									<!-- <img src="h5/images/live-poster.jpg" class="noSwipe" id="website-live-play"/> -->
+									<video playsinline="" webkit-playsinline="" x-webkit-airplay="allow" x5-playsinline="" style="width:100%;height:100%" class="bjy-video show" src="pc/video/video.mp4" controls="controls"></video>
+									<!-- 飞起来的~弹幕列表 -->
+									<!-- <div class="live-danmu-container abso">
+									</div> -->
+								</div>
+								<div class="textList abso">
+									<div class="textList-title">弹幕内容</div>
+									<div class="textList-content-container noSwipe">
+										<div class="textList-content-wrap">
+											<p>游客70: 坐等价格</p>
+											  <p>游客71: 真心希望长安不要让我们失望 价格惠民</p>
+											  <p>游客72: 8万起差不多了</p>
+											  <p>游客73: 斗鱼咋选俩逗比直播</p>
+											  <p>游客74: 看的尴尬症都犯了，就不能多花钱请点专业车评</p>
+											  <p>游客75: 真像网传手动挡9.8w起步，就要骂他了！</p>
+											  <p>游客76: 坐等价格</p>
+											  <p>游客77: 你好</p>
+											  <p>游客78: 价格</p>
+											  <p>游客79: 6.78万</p>
+											  <p>游客80: 上面不是说了9.8万？</p>
+											  <p>游客81: 那就太高了就不考虑了</p>
+											  <p>游客82: 开始了吗</p>
+											  <p>游客83: 好</p>
+											  <p>游客84: 8万起</p>
+											  <p>游客85: 价格多少</p>
+											  <p>游客86: 是我吗</p>
+											  <p>游客87: 8.8万</p>
+											  <p>游客88: 10.8万</p>
+											  <p>游客104: 有人吗</p>
+											  <p>游客105: 55555</p>
+											  <p>游客106: 什么时候开始</p>
+											  <p>游客107: 666</p>
+											  <p>游客108: 预测一下价格</p>
+											  <p>游客109: 能不能出中端轿车 不喜欢suv</p>
+											  <p>游客110: 8-12万多</p>
+											  <p>游客111: 睿骋太老了 出点年轻人开的高颜值家轿吧</p>
+											  <p>游客112: 乞丐版应该在9万左右</p>
+											  <p>游客114: 7/11</p>
+											  <p>游客115: 什么时候开始直播</p>
+											  <p>游客116: 不可能那么贵</p>
+											  <p>游客117: gui</p>
+											  <p>游客118: 要到8点整吗</p>
+											  <p>游客119: 贵了直接买吉利gs</p>
+											  <p>游客120: 价格给我们一个惊喜，我们给销量一个惊喜</p>
+											  <p>游客121: 7。8</p>
+											  <p>游客122: 贵了直接买传祺</p>
+											  <p>游客123: 不过我还是比较喜CS75</p>
+											  <p>游客124: 希望不要太贵</p>
+											  <p>游客125: 有自动泊车不可能太便宜</p>
+											  <p>游客126: 贵了真的不会买</p>
+											  <p>游客127: 一定要20点吗？</p>
+											  <p>游客128: 之前传的9.88起靠谱吗</p>
+											  <p>游客129: 早点开始不行吗</p>
+											  <p>游客130: 贵不贵无所谓，我是没看好它</p>
+											  <p>游客131: 虚拟价格</p>
+											  <p>游客132: 正式价格还没出来</p>
+											  <p>游客133: 你看不看好无所谓</p>
+											  <p>游客134: 还没开始</p>
+											  <p>游客135: 那人是谁</p>
+											  <p>游客136: 吓我一跳</p>
+											  <p>游客137: 为了55 我用的流量，不要让我失望</p>
+											  <p>游客139: 75用户路过。。。。</p>
+											  <p>游客141: 价格没优势肯定卖不动</p>
+											  <p>游客142: 看直播的人不多呢感觉</p>
+											  <p>游客143: 好多人</p>
+											  <p>游客155: 车子不错很好，关键看定价</p>
+											  <p>游客158: 长安口碑不错了</p>
+											  <p>&nbsp;</p>
+										</div>
+									</div>
+									<div class="textList-input-wrap">
+										<input id="msginput" class="fl" type="text" placeholder="来说两句吧" name="">
+										<button class="bjy-button bjy-send-message" disabled="true">发送</button>
+									</div>
+
+									<!-- 弹幕 点赞 icon -->
+									<div class="icons noSwipe abso" style="display:none">
+										<!-- <img class="icon-dan-no noSwipe" data-val="close" src="h5/images/dan-no.png"> -->
+										<div class="zanbox rela">
+											
+										</div>
+										<img class="icon-zan noSwipe" src="h5/images/0.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 斗鱼直播 -->
+					<div class="swiper-slide swiper-no-swiping page5" navIndex="3">
+						<img class="bgImg-center" src="h5/images/page5.jpg">
+						<div class="live-content abso">
+							<div class="live-title noSwipe rela">
+								<img src="h5/images/douyu-title.png">
+								<div class="guanzhu abso">
+									<img class="guanzhu-btn" src="h5/images/guanzhu-btn.png">
+									<img class="qrcode abso" src="h5/images/qrcode.png">
+								</div>
+								<!-- <img class="changan_v abso" src="h5/images/changan_v.png"> -->
+							</div>
+							<!-- 直播盒子 -->
+							<div class="live-video rela">
+								<img id="douyu-video-poster" src="h5/images/live-poster.jpg">
+								<video id="dy-video-player" controls="controls" poster="h5/images/live-poster.jpg" class="video-js abso" type="application/x-mpegURL" bject-fit="fill" webkit-playsinline="true" preload="auto" autoplay="autoplay" src="http://vodhls1.douyucdn.cn/live/normal_live-431972rXhxcv9Bk1--20170726182657/playlist.m3u8?k=553f0d87154b90e97c2a40b017630b59&t=59797607&u=0&ct=h5&vid=1074863&d=">
+								</video>
+								<!-- <iframe id="iframe-dy" class="abso " src="https://m.douyu.com/bizroom/1275878?hide=1"></iframe> -->
+							</div>
+							<div class="changeBtn abso man"></div>
+							<img class="changeBtn noSwipe abso man" src="h5/images/live-changeMan.png">
+							<img class="changeBtn noSwipe abso wo" src="h5/images/live-changeWo.png">
+						</div>
+					</div>
+					<!-- 360 -->
+					<div class="swiper-slide swiper-no-swiping page-360" navIndex="4">
+						<img class="bgImg-center" src="h5/images/page6.jpg">
+					</div>
+					<!-- 卖点 内饰-->
+					<div class="swiper-slide swiper-no-swiping page-neishi" navIndex="4">
+					</div>
+					<!-- 卖点 舒适 -->
+					<div class="swiper-slide swiper-no-swiping page-comfort" navIndex="5">
+						<img class="bgImg-center" src="h5/images/page8.jpg">
+						<div class="abso text-wrap animated fadeInUp">
+							<img src="h5/images/text-comfort.png">
+							<!-- <img class="more abso" src="h5/images/more.png"> -->
+						</div>
+					</div>
+					<!-- 卖点 安全 -->
+					<div class="swiper-slide swiper-no-swiping page-safe" navIndex="5">
+						<img class="bgImg-center" src="h5/images/page9.jpg">
+						<div class="abso text-wrap text-wrap-left animated fadeInLeft">
+							<img src="h5/images/text-safe1.png">
+						</div>
+						<div class="abso text-wrap text-wrap-right animated fadeInRight">
+							<img src="h5/images/text-safe2.png">
+							<!-- <img class="more abso" src="h5/images/more.png"> -->
+						</div>
+					</div>
+					<!-- 卖点 动力 -->
+					<div class="swiper-slide swiper-no-swiping page-power" navIndex="5">
+						<img class="bgImg-center" src="h5/images/page10.jpg">
+						<div class="abso text-wrap animated fadeInUp">
+							<img src="h5/images/text-power.png">
+							<!-- <img class="more abso" src="h5/images/more.png"> -->
+						</div>
+					</div>
+					<!-- 媒得说 -->
+					<div class="swiper-slide page11 page-media" navIndex="6">
+						<img class="bgImg-center" src="h5/images/page11.jpg">
+						<div class="content animated fadeIn">
+							<div class="swiper-container noSwipe swiper-media">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1441.html" target="_blank">
+											<img src="h5/images/news9.jpg">
+											<p class="abso">新车评网：终于等到你 长安CS55将于7月26日夺目上市！</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1442.html" target="_blank">
+											<img src="h5/images/news10.jpg">
+											<p class="abso">汽车公社：从今往后一万年，你们都还会记住我名字</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1438.html" target="_blank">
+											<img src="h5/images/news1.jpg">
+											<p class="abso">爱卡汽车：长安CS55配置曝光 推7款车/7月26日上市</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1439.html" target="_blank">
+											<img src="h5/images/news2.jpg">
+											<p class="abso">搜狐汽车：长安CS55就快上市，先来看看配置如何</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1427.html" target="_blank">
+											<img src="h5/images/news3.jpg">
+											<p class="abso">车讯网：进口品质的国产SUV 车讯网试驾长安CS55</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1292.html" target="_blank">
+											<img src="h5/images/news4.jpg">
+											<p class="abso">人民网：兑现你的期待 人民网试驾长安CS55</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1424.html" target="_blank">
+											<img src="h5/images/news5.jpg">
+											<p class="abso">凤凰汽车：试驾长安CS55 具备爆款实力的新颜值担当</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1420.html" target="_blank">
+											<img src="h5/images/news6.jpg">
+											<p class="abso">新浪汽车：时尚新宠 车小鬼大 试驾长安汽车CS55</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1425.html" target="_blank">
+											<img src="h5/images/news7.jpg">
+											<p class="abso">网通社：集大哥小弟优势于一身 试长安CS55 1.5T</p>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="http://www.changan.com.cn/news/mtzs/1421.html" target="_blank">
+											<img src="h5/images/news8.jpg">
+											<p class="abso">汽车之家：值得等下去 试驾长安CS55 1.5T自动挡</p>
+										</a>
+									</div>
+									
+								</div>
+							</div>
+							<img class="btn abso prev" src="h5/images/prev.png">
+							<img class="btn abso next" src="h5/images/next.png">
+							<div class="pagination-media abso"></div>
+						</div>
+					</div>
+					<!--评论-->
+					<div class="swiper-slide swiper-no-swiping page-replay" navIndex="7">
+						<img class="bgImg-center" src="h5/images/replay_bg.jpg">
+						<div class="replay-wrap noSwipe">
+							<div class="replay-box nano">
+								<h3>互动评论</h3>
+								<ul class="nano-content">
+									
+								</ul>
+							</div>
+						</div>
+						<div class="replay_submit">
+							<a target="_blank" style="cursor: pointer"  href="http://club.changan.com.cn/forum.php?mod=viewthread&tid=36960&page=1&extra=#pid442861"><img src="h5/images/replay_submit.png" /></a>
+						</div>
+					</div>
+					<!--预约 -->
+					<div class="swiper-slide swiper-no-swiping page-form" navIndex="8">
+						<img class="bgImg-center" src="h5/images/page12.jpg">
+						<div class="form-wrap abso">
+							<!-- <img src="h5/images/form-title.png"> -->
+							<div class="form abso animated fadeIn">
+								<div class="input-wrap">
+									<input id="uname" class="input" type="text" name="" placeholder="">
+									<div class="text">姓名<span>NAME</span></div>
+								</div>
+								<div class="input-wrap">
+									<input id="umobile" class="input" type="tel" name="" placeholder="">
+									<div class="text">手机号<span>MOBILE</span></div>
+								</div>
+								<div class="input-wrap select-wrap">
+									<div class="half fl">
+										<select class="input" id="province">
+											<option>选择省份PROVINCE</option>
+										</select>
+										<div class="text">选择省份<span>PROVINCE</span></div>
+									</div>
+									<div class="half fl">
+										<select id="city" class="input">
+											<option>选择城市CITY</option>
+										</select>
+										<div class="text">选择城市<span>CITY</span></div>
+									</div>
+									<div class="half fr">
+										<select id="town" class="input">
+											<option>选择地区TOWN</option>
+										</select>
+										<div class="text">选择地区<span>TOWN</span></div>
+									</div>
+								</div>
+								<div class="input-wrap select-wrap">
+									<select id="dealer" class="input">
+										<option>选择经销商CHOOSE</option>
+									</select>
+									<div class="text">选择经销商<span>CHOOSE</span></div>
+								</div>
+								<div id="submitdrive" class="submit noSwipe">提交</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 右侧导航 -->
+		<div class="half-right fl">
+			<div class="btn top">
+				<img src="h5/images/top.png">
+			</div>
+			<div id="right-nav" class="right-nav swiper-container swiper-nav">
+				<ul class="swiper-wrapper">
+					<!-- 首页 -->
+					<li class="swiper-slide jump swiper-no-swiping act" pageIndex="0">
+						<div><img src="h5/images/icon1.png" alt=""></div>
+					</li>
+					<!-- 价格 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="2">
+						<div><img src="h5/images/icon2.png" alt=""></div>
+					</li>
+					<!-- 官网直播 -->
+					<li class="swiper-slide jump swiper-no-swiping" id="website-live-play" pageIndex="3">
+						<div><img src="h5/images/icon3.png" alt=""></div>
+					</li>
+					<!-- 斗鱼直播 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="4">
+						<div><img src="h5/images/icon4.png" alt=""></div>
+					</li>
+					<!-- 360 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="5">
+						<div><img src="h5/images/icon5.png" alt=""></div>
+					</li>
+					<!-- 卖点 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="7">
+						<div><img src="h5/images/icon6.png" alt=""></div>
+					</li>
+					<!-- 媒得说 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="10">
+						<div><img src="h5/images/icon7.png" alt=""></div>
+					</li>
+					<!--精彩评论-->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="11">
+						<div><img src="h5/images/icon_replay.png" alt=""></div>
+					</li>
+					<!-- 一键预约 -->
+					<li class="swiper-slide jump swiper-no-swiping" pageIndex="12">
+						<div><img src="h5/images/icon8.png" alt=""></div>
+					</li>
+					<!-- 分享 -->
+					<!-- <li class="swiper-slide swiper-no-swiping">
+						<div><img src="h5/images/icon9.png" alt=""></div>
+					</li> -->
+				</ul>
+			</div>
+			<div class="btn down">
+				<img src="h5/images/down.png">
+			</div>
+		</div>
+		<div class="fixed-btn-wrap abso heng">
+			<div class="btn abso popup-prev"><img src="h5/images/popup-prev.png"></div>
+			<div class="btn abso popup-next"><img src="h5/images/popup-next.png"></div>
+		</div>
+	</div>
+	<div class="abso popup">
+		<!-- vr 内饰 -->
+		<div id="vr-box" class="abso">
+			<div id="pano">
+				<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+				<script>
+					embedpano({swf:"h5/js/tour.swf", xml:"h5/js/tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+				</script>
+			</div>
+			<div class="text-content abso">
+				<div class="abso text-wrap heng animated fadeInUp">
+					<img class="img-text" src="h5/images/text-neishi.png?v=1">
+					<!-- <img class="more abso" src="h5/images/more.png"> -->
+				</div>
+				<div class="abso text-wrap shu animated fadeInLeft">
+					<img class="img-text" src="h5/images/text-neishi1.png">
+					<!-- <img class="more abso" src="h5/images/more1.png"> -->
+				</div>
+			</div>
+		</div>
+		<!-- 360 -->
+		<div class="carframes-wrap abso">
+			<div id="carframes" class="abso"></div>
+			<div class="abso text-wrap heng animated fadeInUp">
+				<img class="img-text" src="h5/images/text-360.png">
+				<!-- <img class="more abso" src="h5/images/more.png"> -->
+			</div>
+			<div class="abso text-wrap shu animated fadeInLeft">
+				<img class="img-text" src="h5/images/text-360-1.png">
+				<!-- <img class="more abso" src="h5/images/more1.png"> -->
+			</div>
+			<div class="changeColorBtn-wrap abso">
+				<div class="colorBtn red act" data-color="red"></div>
+				<div class="colorBtn blue" data-color="blue"></div>
+			</div>
+			<img class="rotateBtn abso" src="h5/images/rotateBtn.png">
+		</div>
+	</div>
+	<img class="todown abso" src="h5/images/todown.png">
+	<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.367/classroom/classroom.js"></script>
+	<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.367/barrage/Barrage.js"></script>
+	<!-- <script src="//www.baijiacloud.com/js-sdk/0.0.367/message/messageList/MessageList.js"></script> -->
+	<script src="//www.baijiacloud.com/js-sdk/0.0.367/message/messageSender/MessageSender.js"></script>
+	<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.367/player/player.js"></script>
+	<script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.367/player/core/Player.js"></script>
+    <script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.367/player/extension/html.js"></script>
+    <!-- <script src="http://live-cdn.baijiacloud.com/js-sdk/0.0.322/player/extension/html.js"></script> -->
+	<script src="h5/js/live_baijiayun.js?v=18"></script>
+	<script src="h5/js/dealers.js"></script>
+	<script src="h5/js/testdrive.js"></script>
+	<script src="h5/js/index.js?v=16"></script>
+	<script src="h5/emotion/icon.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+	$(window).load(function(){
+		//斗鱼点击播放
+		// touch.on("#douyu-video-poster","tap",function(e) {
+		// 	document.getElementById('dy-video-player').play();
+		// });
+	})
+	// window.onerror = function (msg) {
+	//     alert(msg);
+	// };
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+工程为CI框架编写的
+
+域名 http://www.changan.com.cn/cs55/sell/
+
+index.html 为判断设备自动跳转
+
+pc pc端代码
+h5 手机端代码
+php 后台文件
+
+1.导入1705_cs55.sql
+2.修改数据库配置文件 application/config/database.php
+3.后台地址 index.php?c=login 
+
+
+
+
+	

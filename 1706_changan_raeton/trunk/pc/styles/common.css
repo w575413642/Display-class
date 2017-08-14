@@ -1,0 +1,202 @@
+ .clearfix:after {
+     display: block;
+     height: 0;
+     content: "";
+     clear: both;
+     overflow: hidden;
+ }
+ 
+ .fl {
+     float: left;
+ }
+ 
+ .fr {
+     float: right;
+ } 
+.animated{
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.sharepic{
+	display: none;
+}
+.loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	z-index: 9999;
+	background: #fff url('../images/loading.gif') no-repeat 50%;
+}
+.d-page{
+	width:100%;
+	height:100%;
+}
+/*---------以上。全局---------*/
+ 
+ /*---------------------------menu_start---------------------------*/ 
+ .d-menu{
+     background:url('../images/1px.png');
+	 position:relative;
+	 z-index:9;
+	 height:41px;
+ }
+ .d-menubg{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+ }
+ .d-menu:after{
+     display: block;
+     height: 0;
+     content: "";
+     clear: both;
+     overflow: hidden;
+ }
+ /*---------左侧logo---------*/
+ .d-logoLeft{
+     float: left; 
+     width: 13.54%;
+     margin-left: 2.6%;
+	 margin-right:1%;
+ }
+ .d-logoLeft img{
+     width: 100%;
+ }
+ /*---------菜单内容---------*/
+ .d-menu-content{
+     margin:0 auto;
+     width: 72%; 
+ }
+ .d-menu-content:after{
+     display: block;
+     height: 0;
+     content: "";
+     clear: both;
+     overflow: hidden;
+ }
+ .d-menu-content a{
+     color: #fff; 
+     /*padding: 0 35px; */
+     display: block;
+     float: left;
+     width:14%;/*55*/
+     text-align: center;
+	 font-size: 14px;
+	 position:relative; 
+	 margin-left:-3.4%;
+     height: 41px;
+ }
+ .d-menu-content a img{
+	display: none;
+	width:100%;
+	height:100%;  
+ }
+ .d-menu-content a span{
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	line-height:41px;
+	top:0;
+	left:0;
+ }
+ .d-menu-content a:hover,.d-menu-content a.active{
+     /*background: url('../images/menuLiHoverBg.png') no-repeat;*/ 
+     color: #000;
+ }
+ .d-menu-content a.active img,.d-menu-content a:hover img{
+	display: block;
+  }
+ .d-menu-content .menu2{
+	width:17%;
+ }
+ 
+ /*---------右侧logo---------*/
+ .d-logoRight{
+     float: right; 
+     max-width: 199px;
+     width: 10.36%;
+     margin-right: 2.6%;
+	 line-height:41px;
+ }
+ .d-logoRight img{
+	width:100%;
+ }
+ /*---------------------------menu_end---------------------------*/  
+ /*---------------------------d-bottom_start---------------------------*/ 
+  .d-bottom{
+     width: 100%;
+     position: fixed;
+     bottom: 0px; 
+	 z-index:9;
+  }
+ /*---------左侧内容---------*/ 
+ .d-bottom-content{ 
+     float: left;
+ }
+ .d-bottom-content a{
+     background: url('../images/small.png') no-repeat left center;
+	 *FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.cloud-top.com.cn/1510_vitara/images/small.png', sizingMethod='crop');
+     padding-left: 16px;
+     color: #dfdfdf;
+     margin-left: 30px;
+ }
+ .d-bottom-content a:hover{
+     color:#fff;
+ }
+ .d-bottom-content p{
+     color: #dedede;
+     margin-left: 45px;
+     line-height: 35px;
+ }
+ /*---------右侧分享---------*/ 
+ .d-bottom-share{
+     margin-right: 30px;
+     float: right;
+ }
+ .d-bottom-share a{
+     margin-left: 5px;
+ }
+ /*---------------------------d-bottom_end---------------------------*/
+ /*---------------------------pagination_start-----------------------*/
+/*---------右侧导航---------*/
+.pagination{
+    width: 100px;
+    position: fixed;
+    top: 30%;
+    right: 50px;
+    z-index: 9;
+}
+.swiper-pagination-switch{
+    display: block; 
+    height: 20px;
+    line-height: 20px;
+    background: url('../images/index/rightnavBg1.png') right center no-repeat;
+	*FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.cloud-top.com.cn/1510_vitara/images/rightnavBg1.png', sizingMethod='crop');
+    cursor: pointer;
+    text-align: center;
+    color: #fff;  
+}
+.swiper-pagination-switch b{
+    display: none;
+}
+.swiper-active-switch,.swiper-pagination-switch:hover{ 
+    background: url('../images/index/rightnavBg2.png') right center no-repeat;
+	*FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test.cloud-top.com.cn/1510_vitara/images/rightnavBg2.png', sizingMethod='crop');
+}
+.swiper-active-switch b,.swiper-pagination-switch:hover b{
+    display: block;
+}
+ /*---------------------------pagination_end-----------------------*/
+ /*---------------------------屏幕小于1200px---------------------------*/
+@media screen and (max-width: 1200px){
+     /*---------左侧logo---------*/ 
+	.d-logoLeft{
+		width:19%;
+	}
+}
